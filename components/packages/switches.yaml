@@ -1,0 +1,14 @@
+switch:
+  - platform: template
+    switches:
+      pc_lucas:
+        value_template: "{{ is_state('binary_sensor.pc_lucas', 'on') }}"
+        turn_on:
+          service: wake_on_lan.send_magic_packet
+          data:
+            mac: 4C-CC-6A-61-C4-35
+        turn_off:
+          service: mqtt.publish
+          data:
+            topic: "iotlink/workgroup/lucas-pc/commands/hibernate"
+            payload: ""

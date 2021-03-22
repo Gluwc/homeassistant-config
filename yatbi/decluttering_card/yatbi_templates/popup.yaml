@@ -1,0 +1,70 @@
+popup:
+  card:
+    # Sets the first card to be sticky.
+    type: custom:mod-card
+    style:
+      hui-vertical-stack-card$: |
+        #root > :first-child {
+          position: sticky;
+          top: -20px;
+          z-index: 1;
+        }
+    card:
+      type: vertical-stack
+      cards:
+
+      # Popup Header
+      - type: custom:button-card
+        template: base
+        color: auto
+        entity: '[[entity]]'
+        name: '[[name]]'
+        show_icon: false
+        tap_action:
+          action: more-info
+        styles:
+          card:
+            - height: 58px
+            - border-radius: 0px
+          name:
+            - justify-self: start
+            - padding-left: 16px
+            - font-size: 26px
+            - font-weight: var(--yatbi-font-weight)
+
+      # Sets the last card to be sticky.
+      - type: custom:mod-card
+        style:
+          hui-vertical-stack-card$: |
+            #root {
+              padding: 8px;
+              padding-top: 0px;
+            }
+            * > ha-card {
+              box-shadow: none;
+            }
+            #root > :last-child {
+              position: sticky;
+              bottom: -20px;
+            }
+        card:
+          type: vertical-stack
+          cards:
+
+          # Popup cards.
+          - type: vertical-stack
+            cards: '[[cards]]'
+
+          # Close popup button.
+          - type: custom:button-card
+            color: var(--yatbi-button-close-popup-color)
+            color_type: card
+            name: Close
+            styles:
+              name:
+                - color: var(--primary-text-color)
+                - font-weight: var(--yatbi-font-weight)
+            tap_action:
+              action: fire-dom-event
+              browser_mod:
+                command: close-popup

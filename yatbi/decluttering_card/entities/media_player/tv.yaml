@@ -1,0 +1,45 @@
+media_player.tv:
+  card:
+    type: vertical-stack
+    cards:
+    - type: custom:decluttering-card
+      template: container
+      variables:
+      - name: Volume
+      - cards:
+        - type: horizontal-stack
+          cards:
+          - type: custom:button-card
+            template: button
+            icon: mdi:volume-minus
+            tap_action:
+              action: call-service
+              service: media_player.volume_down
+              service_data:
+                entity_id: media_player.tv
+          - type: 'custom:button-card'
+            color_type: label-card
+            color: var(--primary-color)
+            entity: media_player.tv
+            label: >
+              [[[
+                return `${Math.round(Number(states["media_player.tv"].attributes.volume_level) * 100)}`;
+              ]]]
+            show_label: true
+            show_icon: false
+            show_name: false
+            size: 15%
+            styles:
+              card:
+                - width: 40px
+                - height: 40px
+              label:
+                - font-weight: var(--yatbi-font-weight)
+          - type: custom:button-card
+            template: button
+            icon: mdi:volume-plus
+            tap_action:
+              action: call-service
+              service: media_player.volume_up
+              service_data:
+                entity_id: media_player.tv

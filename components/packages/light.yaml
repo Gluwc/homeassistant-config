@@ -1,0 +1,4 @@
+light:
+  - platform: switch
+    name: Mirror Bathroom
+    entity_id: switch.mirror_bathroom

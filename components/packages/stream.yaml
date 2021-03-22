@@ -1,0 +1,6 @@
+stream:
+camera:
+  - platform: generic
+    name: Living Room
+    still_image_url: "http://192.168.1.217/snap.jpeg"
+    stream_source: "rtsp://192.168.1.217:554/s0"

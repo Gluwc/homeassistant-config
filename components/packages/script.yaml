@@ -1,0 +1,9 @@
+script:
+  navigate_to_configuration:
+    alias: Navigate to Configuration
+    sequence:
+    - service: browser_mod.navigate
+      data:
+        navigation_path: /config/dashboard/
+    - service: browser_mod.close_popup
+    mode: single

@@ -1,0 +1,10 @@
+- platform: mqtt
+  state_topic: dsmr/reading/electricity_currently_delivered
+  icon: mdi:power-plug
+  unit_of_measurement: kW
+  name: Electricity Home
+- platform: mqtt
+  state_topic: dsmr/consumption/gas/currently_delivered
+  icon: mdi:fire
+  unit_of_measurement: m³
+  name: Gas Home

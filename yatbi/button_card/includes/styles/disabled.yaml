@@ -1,0 +1,13 @@
+card:
+- filter: grayscale(100%)
+name:
+- filter: opacity(35%)
+icon:
+- filter: opacity(35%)
+state:
+- filter: opacity(35%)
+label:
+- filter: opacity(35%)
+custom_fields:
+  status:
+  - filter: opacity(35%)

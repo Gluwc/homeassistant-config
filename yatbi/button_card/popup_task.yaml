@@ -1,0 +1,19 @@
+popup_task:
+  template: popup
+  tap_action:
+    confirmation:
+      text: '[[[return `Did you complete ${entity.attributes.friendly_name}?`]]]'
+    action: call-service
+    service: input_datetime.set_datetime
+    service_data:
+      entity_id: '[[[return `${entity.entity_id}`]]]'
+      timestamp: '[[[return `${Math.round(Date.now()/1000)}`]]]'
+  hold_action:
+    action: fire-dom-event
+    browser_mod:
+      command: popup
+      card: !include includes/nocard.yaml
+      deviceID:
+        - this
+      hide_header: true
+  custom_fields: !include includes/custom_fields.yaml

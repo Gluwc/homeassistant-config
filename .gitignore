@@ -1,0 +1,13 @@
+secrets.yaml
+custom_components
+.storage
+.cloud
+.google.token
+.google_maps_location_sharing.cookies
+www
+harmony_12118300.conf
+home-assistant.log
+home-assistant_v2.db
+options.xml
+zwcfg_0xf1bfebd0.xml
+zwscene.xml

@@ -1,0 +1,13 @@
+homeassistant:
+  auth_providers:
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.1.0/24
+    - type: homeassistant
+  packages: !include_dir_named components/packages
+  customize: !include customize.yaml
+
+logger:
+  default: warning
+  logs:
+    homeassistant.components.webhook: debug

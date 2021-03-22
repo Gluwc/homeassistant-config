@@ -1,0 +1,6 @@
+card_media_stereo:
+  card:
+    type: vertical-stack
+    cards:
+    - type: custom:button-card
+      color_type: blank-card

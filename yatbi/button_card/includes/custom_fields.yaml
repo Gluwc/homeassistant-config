@@ -1,0 +1,27 @@
+status: >
+  [[[
+      if (this.state_icon) {
+        return `<ha-icon
+          icon="${this.state_icon}"
+          style="width: 22px; height: 22px; color: var(--primary-text-color);">
+          </ha-icon>`
+      }
+      else if (variables) {
+        if (variables.display_entities){
+          this.display_entities = "";
+          for (const selected_entity in variables.display_entities) {
+            console.log(selected_entity)
+            this.display_entities = this.display_entities + `<div
+              style="
+              font-size: 14px;
+              font-weight: var(--yatbi-font-weight);
+              text-align: right;
+              color: var(--primary-text-color);
+              ">
+              ${Math.round(states[variables.display_entities[selected_entity]].state)}<span style="margin-left: 2px;">${states[variables.display_entities[selected_entity]].attributes.unit_of_measurement}</span>
+            </div>`
+          }
+          return `${this.display_entities}`
+        }
+      }
+  ]]]

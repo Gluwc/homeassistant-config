@@ -1,0 +1,18 @@
+switch.pc_lucas:
+  card:
+    type: vertical-stack
+    cards:
+    - type: custom:decluttering-card
+      template: container_tiles
+      variables:
+      - name: Sensors
+      - cards:
+        - type: custom:button-card
+          template: popup
+          entity: sensor.lucas_pc_cpu_usage
+        - type: custom:button-card
+          template: popup
+          entity: sensor.lucas_pc_memory_usage
+        - type: custom:button-card
+          template: popup
+          entity: sensor.lucas_pc_storage_c_available_free_space

@@ -1,0 +1,20 @@
+type: custom:decluttering-card
+template: popup
+variables:
+- name: |
+    [[[
+      if (variables) {
+        if (variables.name) {
+          return `${variables.name}`
+        }
+        else if(entity) {
+          return `${entity.attributes.friendly_name}`
+        }
+      }
+      else if(entity) {
+        return `${entity.attributes.friendly_name}`
+      }
+    ]]]
+- cards:
+  - type: custom:decluttering-card
+    template: '[[[return `${variables.template}`]]]'

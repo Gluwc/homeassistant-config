@@ -1,0 +1,13 @@
+popup_hold:
+  template: popup
+  tap_action:
+    action: toggle
+  hold_action:
+    action: fire-dom-event
+    browser_mod:
+      command: popup
+      card: !include includes/nocard.yaml
+      deviceID:
+        - this
+      hide_header: true
+  custom_fields: !include includes/custom_fields.yaml

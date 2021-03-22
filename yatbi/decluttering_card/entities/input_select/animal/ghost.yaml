@@ -1,0 +1,26 @@
+input_select.animal_ghost:
+  card:
+    type: vertical-stack
+    cards:
+    - type: custom:decluttering-card
+      template: container_tiles
+      variables:
+      - name: Devices
+      - cards:
+        - type: custom:button-card
+          template: popup
+          entity: light.terrarium_ghost
+        - type: custom:button-card
+          template: popup
+          entity: sensor.climate_temperature_warm_ghost
+        - type: custom:button-card
+          entity: sensor.climate_humidity_warm_ghost
+          template: popup
+    - type: custom:decluttering-card
+      template: container_tiles
+      variables:
+        - name: Tasks
+        - cards:
+          - type: 'custom:button-card'
+            template: popup_task
+            entity: input_datetime.task_clean_ghost

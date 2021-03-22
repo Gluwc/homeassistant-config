@@ -1,0 +1,12 @@
+type: custom:decluttering-card
+template: >
+  [[[
+    if(isNaN(entity.state)){
+        return `logbook`;
+    }
+    else{
+        return `history`;
+    }
+  ]]]
+variables:
+- entity: '[[[return `${entity.entity_id}`]]]'

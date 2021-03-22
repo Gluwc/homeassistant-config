@@ -1,0 +1,191 @@
+# Defines the look of a tile based on the state.
+
+# Night
+- value: Night
+  color: var(--yatbi-state-night-color)
+  icon: mdi:moon-waning-crescent
+
+# Occupied
+- value: Occupied
+  color: var(--yatbi-state-occupied-color)
+  icon: mdi:account
+
+# Idle
+- value: Idle
+  color: var(--card-background-color)
+  styles: !include styles/disabled.yaml
+
+# Home
+- value: Home
+  color: var(--primary-color)
+
+# Away
+- value: Away
+  color: var(--card-background-color)
+  icon: mdi:door
+  styles: !include styles/disabled.yaml
+
+# playing
+- value: playing
+  color: var(--primary-color)
+  icon: mdi:play
+
+# Disabled
+- value: Disabled
+  color: var(--card-background-color)
+  icon: hass:eye-off
+
+# Heating
+- value: Heating
+  color: var(--yatbi-state-heating-color)
+
+# Heat
+- value: heat
+  color: var(--yatbi-state-heating-color)
+
+# Cooling
+- value: Cooling
+  color: var(--yatbi-state-cooling-color)
+
+# Sleeping
+- value: Sleeping
+  color: var(--card-background-color)
+  icon: mdi:sleep
+  styles: !include styles/disabled.yaml
+
+# off
+- value: 'off'
+  color: var(--card-background-color)
+  styles: !include styles/disabled.yaml
+
+# on and not light
+- operator: template
+  value: >
+    [[[
+      if (entity){
+        if (entity.entity_id.split('.')[0] != 'light' && entity.state == 'on') {
+          return true;
+        }
+      }
+    ]]]
+  color: var(--primary-color)
+
+# docked
+- value: docked
+  color: var(--card-background-color)
+  styles: !include styles/disabled.yaml
+
+# Open
+- value: open
+  color: var(--card-background-color)
+  icon: mdi:blinds-open
+  styles: !include styles/disabled.yaml
+
+# closed
+- value: closed
+  color: var(--primary-color)
+  icon: mdi:blinds
+
+# unavailable
+- value: unavailable
+  color: var(--yatbi-state-unavailable-color)
+  icon: mdi:alert-circle
+
+# battery low
+- operator: template
+  value: >
+    [[[
+      if (entity){
+        if (entity.attributes.device_class == 'battery' && entity.state < 25) {
+          return true;
+        }
+      }
+    ]]]
+  color: var(--yatbi-battery-low-color)
+
+# battery medium
+- operator: template
+  value: >
+    [[[
+      if (entity){
+        if (entity.attributes.device_class == 'battery' && entity.state < 75) {
+          return true;
+        }
+      }
+    ]]]
+  color: var(--yatbi-battery-medium-color)
+
+# battery high
+- operator: template
+  value: >
+    [[[
+      if (entity){
+        if (entity.attributes.device_class == 'battery' && entity.state >= 75) {
+          return true;
+        }
+      }
+    ]]]
+  color: var(--yatbi-battery-high-color)
+
+# task complete
+- operator: template
+  icon: mdi:check
+  value: >
+    [[[
+      var time = 0;
+      if(entity) {
+        for (var a in entity.attributes) {
+          switch(a) {
+            case "task_seconds":
+              time = entity.attributes.task_seconds;
+              continue;
+            case "task_minutes":
+              time = time + entity.attributes.task_minutes * 60;
+              continue;
+            case "task_hours":
+              time = time + entity.attributes.task_hours * 3600;
+              continue;
+            case "task_days":
+              time = time + entity.attributes.task_days * 86400;
+              continue;
+            case "task_months":
+              time = time + entity.attributes.task_months * 2592000;
+          }
+        }
+        if(Date.parse(entity.state) + (time * 1000) > Date.now() && time != 0) {
+          return true
+        }
+      }
+    ]]]
+  color: var(--yatbi-task-complete-color)
+
+# task incomplete
+- operator: template
+  value: >
+    [[[
+      var time = 0;
+      if(entity) {
+        for (var a in entity.attributes) {
+          switch(a) {
+            case "task_seconds":
+              time = entity.attributes.task_seconds;
+              continue;
+            case "task_minutes":
+              time = time + entity.attributes.task_minutes * 60;
+              continue;
+            case "task_hours":
+              time = time + entity.attributes.task_hours * 3600;
+              continue;
+            case "task_days":
+              time = time + entity.attributes.task_days * 86400;
+              continue;
+            case "task_months":
+              time = time + entity.attributes.task_months * 2592000;
+          }
+        }
+        if(Date.parse(entity.state) + (time * 1000) < Date.now() && time != 0) {
+          return true
+        }
+      }
+    ]]]
+  color: var(--yatbi-task-incomplete-color)

@@ -1,0 +1,15 @@
+input_select.area_hallway:
+  card:
+    type: vertical-stack
+    cards:
+    - type: custom:decluttering-card
+      template: container_tiles
+      variables:
+        - name: Devices
+        - cards:
+          - type: 'custom:button-card'
+            template: popup
+            entity: light.group_hallway
+          - type: 'custom:button-card'
+            template: popup
+            entity: binary_sensor.motion_hallway
