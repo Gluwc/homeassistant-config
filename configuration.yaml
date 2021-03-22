@@ -6,8 +6,3 @@ homeassistant:
     - type: homeassistant
   packages: !include_dir_named components/packages
   customize: !include customize.yaml
-
-logger:
-  default: warning
-  logs:
-    homeassistant.components.webhook: debug
