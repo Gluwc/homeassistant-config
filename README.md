@@ -15,8 +15,6 @@
 * [Unifi Controller](https://hub.docker.com/r/jacobalberty/unifi)
 * [zwavejs2mqtt](https://hub.docker.com/r/zwavejs/zwavejs2mqtt)
 
-# Front-End
-
 ## YATBI (Yet Another Tile Based Interface)
 
 ![screenshot](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/images/yatbi.PNG)
