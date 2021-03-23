@@ -27,7 +27,7 @@
 * State based tile [styles](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/button_card/includes/states.yaml) (color, icon, etc).
 
 ### Why YABTI?
-The power of YABTI lies with templating of your entities on the front end and easy nesting of tiles.
+The power of YABTI lies with templating of your entities and easy nesting of tiles on the front end.
 
 ### Examples
 * [View](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/views/01_home.yaml#L61-L63) > [Living Room](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/entities/input_select/area/living_room.yaml#L10-L12) > [Lights](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/entities/light/group_living_room.yaml#L14-L16) > Desk Light
