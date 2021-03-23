@@ -36,17 +36,17 @@ The power of YABTI lies with templating of your entities on the front end and ea
 
 ### Button Card Tile Templates
 
-| Template | Description
-| ---- | -----------
-| tile | On tap shows HA more-info.
-| popup | On tap shows default YATBI popup of entity including State and Logbook/History.
-| popup_entity | On tap shows `popup` template with embedded entity template.
-| popup_hold | On tap does toggle. On hold shows `popup` template.
-| popup_hold_entity | On tap does toggle. On hold shows `popup_entity` template.
-| popup_light | On tap does toggle. On hold shows `popup` with embedded [light controls](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/yatbi_templates/controls_light.yaml).
-| popup_cover | On tap shows `popup` with embedded [cover controls](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/yatbi_templates/controls_cover.yaml).
-| popup_custom | On tap shows [custom template](https://github.com/Gluwc/homeassistant-config/tree/master/yatbi/decluttering_card/custom).
-| popup_task | On tap sets current time of [Input Datetime](https://www.home-assistant.io/integrations/input_datetime/) entity. Requires custom [entity attribute](https://github.com/Gluwc/homeassistant-config/blob/master/customize.yaml#L28) (`task_seconds`, `task_hours`,`task_days`,`task_months`) to display correct state.
+| Template | Requires | Description
+| ---- | ----------- | -------
+| tile | entity | On tap shows HA more-info.
+| popup | entity | On tap shows default YATBI popup of entity including State and Logbook/History.
+| popup_entity | entity | On tap shows `popup` template with embedded entity template.
+| popup_hold | entity |On tap does toggle. On hold shows `popup` template.
+| popup_hold_entity | entity | On tap does toggle. On hold shows `popup_entity` template.
+| popup_light | entity | On tap does toggle. On hold shows `popup` with embedded [light controls](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/yatbi_templates/controls_light.yaml).
+| popup_cover | entity | On tap shows `popup` with embedded [cover controls](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/yatbi_templates/controls_cover.yaml).
+| popup_custom | variables (`name`, `template`) | On tap shows [custom template](https://github.com/Gluwc/homeassistant-config/tree/master/yatbi/decluttering_card/custom).
+| popup_task | entity | On tap sets current time of [Input Datetime](https://www.home-assistant.io/integrations/input_datetime/) entity. Requires custom [entity attribute](https://github.com/Gluwc/homeassistant-config/blob/master/customize.yaml#L28) (`task_seconds`, `task_hours`,`task_days`,`task_months`) to display correct state.
 
 ### Required Components
 These components are all available on [HACS](https://hacs.xyz/).
