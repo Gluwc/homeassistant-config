@@ -47,3 +47,10 @@ The power of YABTI lies with templating of your entities on the front end and ea
 | popup_cover | On tap shows `popup` with embedded [cover controls](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/yatbi_templates/controls_cover.yaml).
 | popup_custom | On tap shows [custom template](https://github.com/Gluwc/homeassistant-config/tree/master/yatbi/decluttering_card/custom).
 | popup_task | On tap sets current time of [Input Datetime](https://www.home-assistant.io/integrations/input_datetime/) entity. Requires custom [entity attribute](https://github.com/Gluwc/homeassistant-config/blob/master/customize.yaml#L28) (`task_seconds`, `task_hours`,`task_days`,`task_months`) to display correct state.
+
+### Required Components
+These components are all available on [HACS](https://hacs.xyz/).
+* [Browser Mod](https://github.com/thomasloven/hass-browser_mod)
+* [Button Card](https://github.com/custom-cards/button-card)
+* [Decluttering Card](https://github.com/custom-cards/decluttering-card)
+* [Card Mod](https://github.com/thomasloven/lovelace-card-mod)
