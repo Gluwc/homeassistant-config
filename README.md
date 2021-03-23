@@ -23,11 +23,10 @@
 
 ### Features
 * Tile based interface using [Browser Mod](https://github.com/thomasloven/hass-browser_mod), [Button Card](https://github.com/custom-cards/button-card) and [Decluttering Card](https://github.com/custom-cards/decluttering-card).
-* Scales well across different devices.
 * Entity based templating allows for nesting of tiles.
 
 ### Why YABTI?
-The power of YABTI lies with templating of your entities on the front end and easy nesting of tiles within other tiles. This allows for linking of entities to other entities on the front-end.
+The power of YABTI lies with templating of your entities on the front end and easy nesting of tiles within other tiles.
 
 ### Examples
 * [View](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/views/01_home.yaml) > [Living Room](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/entities/input_select/area/living_room.yaml) > [Lights](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/entities/light/group_living_room.yaml) > [Desk Light](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/decluttering_card/entities/light/group_living_room.yaml#L14)
