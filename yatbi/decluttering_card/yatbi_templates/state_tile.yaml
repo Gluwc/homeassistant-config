@@ -2,20 +2,20 @@ state_tile:
   card:
     type: vertical-stack
     cards:
-    - type: custom:decluttering-card
-      template: header
-      variables:
-      - name: State
-    - type: grid
-      cards:
-      - type: custom:button-card
-        template: tile
-        show_name: false
-        show_last_changed: true
-        hold_action:
-          action: more-info
-        styles:
-          state:
-          - font-size: 16px
-          - filter: opacity(100%)
-        entity: '[[entity]]'
+      - type: custom:decluttering-card
+        template: header
+        variables:
+          - name: State
+      - type: grid
+        cards:
+          - type: custom:button-card
+            template: tile
+            show_name: false
+            show_last_changed: true
+            hold_action:
+              action: more-info
+            styles:
+              state:
+                - font-size: 16px
+                - filter: opacity(100%)
+            entity: "[[entity]]"

@@ -6,7 +6,7 @@
       filter:
         include:
           - entity_id: climate.*
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         show_header_toggle: false
         title: Lights
@@ -14,14 +14,14 @@
       filter:
         include:
           - entity_id: light.*
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         title: Media Players
         type: entities
       filter:
         include:
           - entity_id: media_player.*
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         title: Motion Sensors
         type: entities
@@ -33,7 +33,7 @@
               device_class: occupancy
       sort:
         method: name
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         title: Contact Sensors
         type: entities
@@ -41,7 +41,7 @@
         include:
           - attributes:
               device_class: opening
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         title: Temperature
         type: entities
@@ -49,7 +49,7 @@
         include:
           - attributes:
               device_class: temperature
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         title: Lux
         type: entities
@@ -57,7 +57,7 @@
         include:
           - attributes:
               device_class: illuminance
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         title: Lux Sensors
         type: entities
@@ -65,7 +65,7 @@
         include:
           - attributes:
               device_class: illuminance
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         title: CV
         type: entities
@@ -73,7 +73,7 @@
         include:
           - entity_id: sensor.cv*
           - entity_id: binary_sensor.cv*
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         show_header_toggle: false
         title: Automation
@@ -82,7 +82,7 @@
         include:
           - entity_id: input_boolean.automation*
           - entity_id: input_boolean.lovelace*
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         show_header_toggle: false
         title: Area States
@@ -90,7 +90,7 @@
       filter:
         include:
           - entity_id: input_select.area*
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - entities:
         - entity: sensor.version_local
           title: Local Version
@@ -104,24 +104,24 @@
       filter:
         include:
           - state: unavailable
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         title: System
         type: entities
       filter:
         include:
           - entity_id: sensor.glances*
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
     - card:
         title: Batteries
         type: entities
       filter:
         exclude:
-          - state: '>50'
+          - state: ">50"
         include:
           - attributes:
               device_class: battery
-      type: 'custom:auto-entities'
+      type: "custom:auto-entities"
       title: Batteries
     - card:
         show_header_toggle: false
@@ -130,7 +130,7 @@
       filter:
         include:
           - entity_id: switch.*
-      type: 'custom:auto-entities'
-  icon: 'mdi:cpu-64-bit'
+      type: "custom:auto-entities"
+  icon: "mdi:cpu-64-bit"
   path: system
   title: System

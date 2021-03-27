@@ -2,21 +2,21 @@ light.group_living_room:
   card:
     type: vertical-stack
     cards:
-    - type: custom:decluttering-card
-      template: controls_light
-      variables:
-      - entity: light.group_living_room
-    - type: custom:decluttering-card
-      template: container_tiles
-      variables:
-      - name: Lights
-      - cards:
-        - type: custom:button-card
-          template: popup_light
-          entity: light.desk_living_room
-        - type: custom:button-card
-          template: popup_light
-          entity: light.tv_living_room
-        - type: custom:button-card
-          template: popup_light
-          entity: light.couch_living_room
+      - type: custom:decluttering-card
+        template: controls_light
+        variables:
+          - entity: light.group_living_room
+      - type: custom:decluttering-card
+        template: container_tiles
+        variables:
+          - name: Lights
+          - cards:
+              - type: custom:button-card
+                template: popup_light
+                entity: light.desk_living_room
+              - type: custom:button-card
+                template: popup_light
+                entity: light.tv_living_room
+              - type: custom:button-card
+                template: popup_light
+                entity: light.couch_living_room

@@ -2,11 +2,11 @@ media_player.chromecast:
   card:
     type: vertical-stack
     cards:
-    - type: custom:decluttering-card
-      template: container_tiles
-      variables:
-      - name: Devices
-      - cards:
-        - type: custom:button-card
-          template: popup_entity
-          entity: media_player.tv
+      - type: custom:decluttering-card
+        template: container_tiles
+        variables:
+          - name: Devices
+          - cards:
+              - type: custom:button-card
+                template: popup_entity
+                entity: media_player.tv

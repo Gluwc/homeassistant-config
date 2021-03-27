@@ -2,14 +2,14 @@ logbook:
   card:
     type: vertical-stack
     cards:
-    - type: custom:decluttering-card
-      template: header
-      variables:
-      - name: Logbook
-    - type: logbook
-      style: |
+      - type: custom:decluttering-card
+        template: header
+        variables:
+          - name: Logbook
+      - type: logbook
+        style: |
           .content > ha-logbook {
             height: 150px;
           }
-      entities:
-      - '[[entity]]'
+        entities:
+          - "[[entity]]"

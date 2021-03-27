@@ -3,7 +3,6 @@
 # Night
 - value: Night
   color: var(--yatbi-state-night-color)
-  icon: mdi:moon-waning-crescent
 
 # Occupied
 - value: Occupied
@@ -22,7 +21,7 @@
 # Away
 - value: Away
   color: var(--card-background-color)
-  icon: mdi:door
+  icon: mdi:account-outline
   styles: !include styles/disabled.yaml
 
 # playing
@@ -54,7 +53,7 @@
   styles: !include styles/disabled.yaml
 
 # off
-- value: 'off'
+- value: "off"
   color: var(--card-background-color)
   styles: !include styles/disabled.yaml
 

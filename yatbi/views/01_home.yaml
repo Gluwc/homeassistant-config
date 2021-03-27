@@ -6,166 +6,165 @@
         max_cols: 3
         width: 300
       cards:
+        # Media
+        - type: custom:decluttering-card
+          template: container_tiles
+          variables:
+            - name: Media
+            - cards:
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: media_player.chromecast
+                - type: custom:button-card
+                  template: popup
+                  entity: media_player.home
+                - type: custom:button-card
+                  template: popup
+                  entity: media_player.stereo
 
-      # Media
-      - type: custom:decluttering-card
-        template: container_tiles
-        variables:
-          - name: Media
-          - cards:
-            - type: custom:button-card
-              template: popup_entity
-              entity: media_player.chromecast
-            - type: custom:button-card
-              template: popup
-              entity: media_player.home
-            - type: custom:button-card
-              template: popup
-              entity: media_player.stereo
+        # People
+        - type: custom:decluttering-card
+          template: container_tiles
+          variables:
+            - name: People
+            - cards:
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.person_lucas
+                  styles:
+                    card:
+                      - background-image: url('/local/person/lucas/picture.png')
+                  triggers_update:
+                    - sensor.battery_phone_lucas
+                  variables:
+                    display_entities:
+                      - sensor.battery_phone_lucas
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.person_elisa
+                  styles:
+                    card:
+                      - background-image: url('/local/person/elisa/picture.png')
+                  triggers_update:
+                    - sensor.battery_phone_elisa
+                  variables:
+                    display_entities:
+                      - sensor.battery_phone_elisa
 
-      # People
-      - type: custom:decluttering-card
-        template: container_tiles
-        variables:
-          - name: People
-          - cards:
-            - type: custom:button-card
-              template: popup_entity
-              entity: input_select.person_lucas
-              styles:
-                card:
-                  - background-image: url('/local/person/lucas/picture.png')
-              triggers_update:
-              - sensor.battery_phone_lucas
-              variables:
-                display_entities:
-                - sensor.battery_phone_lucas
-            - type: custom:button-card
-              template: popup_entity
-              entity: input_select.person_elisa
-              styles:
-                card:
-                  - background-image: url('/local/person/elisa/picture.png')
-              triggers_update:
-              - sensor.battery_phone_elisa
-              variables:
-                display_entities:
-                - sensor.battery_phone_elisa
+        # Areas
+        - type: custom:decluttering-card
+          template: container_tiles
+          variables:
+            - name: Areas
+            - cards:
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.area_living_room
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.area_bedroom
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.area_kitchen
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.area_toilet
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.area_bathroom
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.area_home
 
-      # Areas
-      - type: custom:decluttering-card
-        template: container_tiles
-        variables:
-          - name: Areas
-          - cards:
-            - type: custom:button-card
-              template: popup_entity
-              entity: input_select.area_living_room
-            - type: custom:button-card
-              template: popup_entity
-              entity: input_select.area_bedroom
-            - type: custom:button-card
-              template: popup_entity
-              entity: input_select.area_kitchen
-            - type: custom:button-card
-              template: popup_entity
-              entity: input_select.area_toilet
-            - type: custom:button-card
-              template: popup_entity
-              entity: input_select.area_bathroom
-            - type: custom:button-card
-              template: popup_entity
-              entity: input_select.area_home
+        - type: custom:layout-break
 
-      - type: custom:layout-break
+        # Animals
+        - type: custom:decluttering-card
+          template: container_tiles
+          variables:
+            - name: Animals
+            - cards:
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.animal_luna
+                  styles:
+                    card:
+                      - background-image: url('/local/animals/luna/picture.png')
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.animal_iera
+                  styles:
+                    card:
+                      - background-image: url('/local/animals/iera/picture.png')
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.animal_pluis
+                  styles:
+                    card:
+                      - background-image: url('/local/animals/pluis/picture.png')
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.animal_amduat
+                  styles:
+                    card:
+                      - background-image: url('/local/animals/amduat/picture.png')
+                  triggers_update:
+                    - sensor.climate_warm_amduat
+                    - sensor.climate_humidity_amduat
+                  variables:
+                    display_entities:
+                      - sensor.climate_temperature_warm_amduat
+                      - sensor.climate_humidity_warm_amduat
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.animal_ghost
+                  styles:
+                    card:
+                      - background-image: url('/local/animals/ghost/picture.png')
+                  triggers_update:
+                    - sensor.climate_temperature_warm_ghost
+                    - sensor.climate_humidity_warm_ghost
+                  variables:
+                    display_entities:
+                      - sensor.climate_temperature_warm_ghost
+                      - sensor.climate_humidity_warm_ghost
+                - type: custom:button-card
+                  template: popup_entity
+                  entity: input_select.animal_naga
+                  styles:
+                    card:
+                      - background-image: url('/local/animals/naga/picture.png')
+                  triggers_update:
+                    - sensor.climate_temperature_warm_naga
+                    - sensor.climate_humidity_warm_naga
+                  variables:
+                    display_entities:
+                      - sensor.climate_temperature_warm_naga
+                      - sensor.climate_humidity_warm_naga
 
-      # Animals
-      - type: custom:decluttering-card
-        template: container_tiles
-        variables:
-          - name: Animals
-          - cards:
-              - type: custom:button-card
-                template: popup_entity
-                entity: input_select.animal_luna
-                styles:
-                  card:
-                    - background-image: url('/local/animals/luna/picture.png')
-              - type: custom:button-card
-                template: popup_entity
-                entity: input_select.animal_iera
-                styles:
-                  card:
-                    - background-image: url('/local/animals/iera/picture.png')
-              - type: custom:button-card
-                template: popup_entity
-                entity: input_select.animal_pluis
-                styles:
-                  card:
-                    - background-image: url('/local/animals/pluis/picture.png')
-              - type: custom:button-card
-                template: popup_entity
-                entity: input_select.animal_amduat
-                styles:
-                  card:
-                    - background-image: url('/local/animals/amduat/picture.png')
-                triggers_update:
-                - sensor.climate_warm_amduat
-                - sensor.climate_humidity_amduat
-                variables:
-                  display_entities:
-                  - sensor.climate_temperature_warm_amduat
-                  - sensor.climate_humidity_warm_amduat
-              - type: custom:button-card
-                template: popup_entity
-                entity: input_select.animal_ghost
-                styles:
-                  card:
-                    - background-image: url('/local/animals/ghost/picture.png')
-                triggers_update:
-                - sensor.climate_temperature_warm_ghost
-                - sensor.climate_humidity_warm_ghost
-                variables:
-                  display_entities:
-                  - sensor.climate_temperature_warm_ghost
-                  - sensor.climate_humidity_warm_ghost
-              - type: custom:button-card
-                template: popup_entity
-                entity: input_select.animal_naga
-                styles:
-                  card:
-                    - background-image: url('/local/animals/naga/picture.png')
-                triggers_update:
-                - sensor.climate_temperature_warm_naga
-                - sensor.climate_humidity_warm_naga
-                variables:
-                  display_entities:
-                  - sensor.climate_temperature_warm_naga
-                  - sensor.climate_humidity_warm_naga
+        # Devices
+        - type: custom:decluttering-card
+          template: container_tiles
+          variables:
+            - name: Devices
+            - cards:
+                - type: "custom:button-card"
+                  template: popup_entity
+                  entity: switch.pc_lucas
+                - type: "custom:button-card"
+                  template: popup
+                  entity: vacuum.neato
 
-      # Devices
-      - type: custom:decluttering-card
-        template: container_tiles
-        variables:
-          - name: Devices
-          - cards:
-            - type: 'custom:button-card'
-              template: popup_entity
-              entity: switch.pc_lucas
-            - type: 'custom:button-card'
-              template: popup
-              entity: vacuum.neato
-
-      # Settings
-      - type: custom:decluttering-card
-        template: container_tiles
-        variables:
-          - name: System
-          - cards:
-            - type: 'custom:button-card'
-              template: popup_custom
-              name: Settings
-              icon: mdi:cog
-              variables:
-                name: Settings
-                template: settings
+        # Settings
+        - type: custom:decluttering-card
+          template: container_tiles
+          variables:
+            - name: System
+            - cards:
+                - type: "custom:button-card"
+                  template: popup_custom
+                  name: Settings
+                  icon: mdi:cog
+                  variables:
+                    name: Settings
+                    template: settings

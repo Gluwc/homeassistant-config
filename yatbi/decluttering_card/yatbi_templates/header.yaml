@@ -1,11 +1,11 @@
 header:
   card:
-    type: 'custom:button-card'
+    type: "custom:button-card"
     color: var(--background-color)
     color_type: label-card
     tap_action:
       action: none
-    name: '[[name]]'
+    name: "[[name]]"
     styles:
       card:
         - height: 30px

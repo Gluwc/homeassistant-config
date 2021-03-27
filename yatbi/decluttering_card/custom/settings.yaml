@@ -2,45 +2,45 @@ settings:
   card:
     type: vertical-stack
     cards:
-    - type: custom:decluttering-card
-      template: container_tiles
-      variables:
-      - name: Lovelace
-      - cards:
-        - type: 'custom:button-card'
-          template: tile
-          name: Refresh UI
-          icon: mdi:view-quilt
-          tap_action:
-            action: call-service
-            service: browser_mod.lovelace_reload
-        - type: 'custom:button-card'
-          template: tile
-          name: Reload Themes
-          icon: mdi:shape
-          tap_action:
-            action: call-service
-            service: frontend.reload_themes
-    - type: custom:decluttering-card
-      template: container_tiles
-      variables:
-      - name: Home Assistant
-      - cards:
-        - type: 'custom:button-card'
-          template: tile
-          name: Restart
-          icon: mdi:refresh
-          confirmation:
-            text: Are you sure you want to restart Home Assistant?
-          tap_action:
-            action: call-service
-            service: homeassistant.restart
-        - type: 'custom:button-card'
-          template: tile
-          name: Configuration
-          icon: mdi:cog
-          tap_action:
-            action: call-service
-            service: script.navigate_to_configuration
-            service_data:
-              navigation_path: /config/dashboard/
+      - type: custom:decluttering-card
+        template: container_tiles
+        variables:
+          - name: Lovelace
+          - cards:
+              - type: "custom:button-card"
+                template: tile
+                name: Refresh UI
+                icon: mdi:view-quilt
+                tap_action:
+                  action: call-service
+                  service: browser_mod.lovelace_reload
+              - type: "custom:button-card"
+                template: tile
+                name: Reload Themes
+                icon: mdi:shape
+                tap_action:
+                  action: call-service
+                  service: frontend.reload_themes
+      - type: custom:decluttering-card
+        template: container_tiles
+        variables:
+          - name: Home Assistant
+          - cards:
+              - type: "custom:button-card"
+                template: tile
+                name: Restart
+                icon: mdi:refresh
+                confirmation:
+                  text: Are you sure you want to restart Home Assistant?
+                tap_action:
+                  action: call-service
+                  service: homeassistant.restart
+              - type: "custom:button-card"
+                template: tile
+                name: Configuration
+                icon: mdi:cog
+                tap_action:
+                  action: call-service
+                  service: script.navigate_to_configuration
+                  service_data:
+                    navigation_path: /config/dashboard/

@@ -2,24 +2,24 @@ location:
   card:
     type: vertical-stack
     cards:
-    - type: custom:decluttering-card
-      template: header
-      variables:
-      - name: Location
-    - type: custom:button-card
-      show_state: true
-      show_name: false
-      show_icon: false
-      tap_action:
-        action: none
-      styles:
-        state:
-          - font-size: 14px
-          - font-weight: var(--yatbi-font-weight)
-      entity: '[[location_entity]]'
-    - type: map
-      aspect_ratio: '2:1'
-      hours_to_show: 12
-      dark_mode: true
-      entities:
-        - '[[gps_entity]]'
+      - type: custom:decluttering-card
+        template: header
+        variables:
+          - name: Location
+      - type: custom:button-card
+        show_state: true
+        show_name: false
+        show_icon: false
+        tap_action:
+          action: none
+        styles:
+          state:
+            - font-size: 14px
+            - font-weight: var(--yatbi-font-weight)
+        entity: "[[location_entity]]"
+      - type: map
+        aspect_ratio: "2:1"
+        hours_to_show: 12
+        dark_mode: true
+        entities:
+          - "[[gps_entity]]"

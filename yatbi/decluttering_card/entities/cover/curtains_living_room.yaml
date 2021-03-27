@@ -2,7 +2,7 @@ cover.curtains_living_room:
   card:
     type: vertical-stack
     cards:
-    - type: custom:decluttering-card
-      template: controls_cover
-      variables:
-      - entity: cover.curtains_living_room
+      - type: custom:decluttering-card
+        template: controls_cover
+        variables:
+          - entity: cover.curtains_living_room

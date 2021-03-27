@@ -9,27 +9,27 @@ input_select.person_lucas:
 input_select.person_elisa:
   device_class: person
 input_datetime.task_cleaned_amduat:
-  task_time: '60'
+  task_time: "60"
 input_datetime.task_fleadrops_pluis:
-  task_months: '3'
+  task_months: "3"
 input_datetime.task_fleadrops_iera:
-  task_months: '3'
+  task_months: "3"
 input_datetime.task_fleadrops_luna:
-  task_months: '3'
+  task_months: "3"
 sensor.gas_home:
   friendly_name: Gas
 sensor.electricity_home:
   friendly_name: Electricity
 input_datetime.task_clean_living_room:
-  task_days: '7'
+  task_days: "7"
 switch.pc_lucas:
   friendly_name: PC Lucas
   icon: mdi:desktop-tower
 input_datetime.task_litter_cats:
-  task_days: '7'
+  task_days: "7"
 input_datetime.task_clean_amduat:
-  task_months: '1'
+  task_months: "1"
 input_datetime.task_clean_ghost:
-  task_months: '1'
+  task_months: "1"
 input_datetime.task_clean_naga:
-  task_months: '1'
+  task_months: "1"

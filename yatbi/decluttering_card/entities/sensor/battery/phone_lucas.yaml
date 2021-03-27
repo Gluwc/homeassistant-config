@@ -2,6 +2,6 @@ sensor.battery_phone_lucas:
   card:
     type: vertical-stack
     cards:
-    - type: sensor
-      entity: sensor.battery_phone_lucas
-      graph: line
+      - type: sensor
+        entity: sensor.battery_phone_lucas
+        graph: line

@@ -2,84 +2,84 @@ controls_light:
   card:
     type: vertical-stack
     cards:
-    - type: custom:decluttering-card
-      template: container
-      variables:
-      - name: Brightness
-      - cards:
-        - type: horizontal-stack
-          cards:
-          - type: custom:button-card
-            template: button
-            name: 25%
-            tap_action:
-              action: call-service
-              service: light.turn_on
-              service_data:
-                entity_id: '[[entity]]'
-                brightness_pct: 25
-          - type: custom:button-card
-            template: button
-            name: 50%
-            tap_action:
-              action: call-service
-              service: light.turn_on
-              service_data:
-                entity_id: '[[entity]]'
-                brightness_pct: 50
-          - type: custom:button-card
-            template: button
-            name: 75%
-            tap_action:
-              action: call-service
-              service: light.turn_on
-              service_data:
-                entity_id: '[[entity]]'
-                brightness_pct: 75
-          - type: custom:button-card
-            template: button
-            name: 100%
-            tap_action:
-              action: call-service
-              service: light.turn_on
-              service_data:
-                entity_id: '[[entity]]'
-                brightness_pct: 100
-    # Color Temp
-    - type: custom:decluttering-card
-      template: container
-      variables:
-      - name: Temperature
-      - cards:
-        - type: horizontal-stack
-          cards:
-          - type: custom:button-card
-            template: button
-            name: Cool
-            color: var(--yatbi-state-cool-color)
-            tap_action:
-              action: call-service
-              service: light.turn_on
-              service_data:
-                entity_id: '[[entity]]'
-                color_temp: 155
-          - type: custom:button-card
-            template: button
-            name: Neutral
-            color: var(--yatbi-state-neutral-color)
-            tap_action:
-              action: call-service
-              service: light.turn_on
-              service_data:
-                entity_id: '[[entity]]'
-                color_temp: 300
-          - type: custom:button-card
-            template: button
-            name: Warm
-            color: var(--yatbi-state-warm-color)
-            tap_action:
-              action: call-service
-              service: light.turn_on
-              service_data:
-                entity_id: '[[entity]]'
-                color_temp: 445
+      - type: custom:decluttering-card
+        template: container
+        variables:
+          - name: Brightness
+          - cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:button-card
+                    template: button
+                    name: 25%
+                    tap_action:
+                      action: call-service
+                      service: light.turn_on
+                      service_data:
+                        entity_id: "[[entity]]"
+                        brightness_pct: 25
+                  - type: custom:button-card
+                    template: button
+                    name: 50%
+                    tap_action:
+                      action: call-service
+                      service: light.turn_on
+                      service_data:
+                        entity_id: "[[entity]]"
+                        brightness_pct: 50
+                  - type: custom:button-card
+                    template: button
+                    name: 75%
+                    tap_action:
+                      action: call-service
+                      service: light.turn_on
+                      service_data:
+                        entity_id: "[[entity]]"
+                        brightness_pct: 75
+                  - type: custom:button-card
+                    template: button
+                    name: 100%
+                    tap_action:
+                      action: call-service
+                      service: light.turn_on
+                      service_data:
+                        entity_id: "[[entity]]"
+                        brightness_pct: 100
+      # Color Temp
+      - type: custom:decluttering-card
+        template: container
+        variables:
+          - name: Temperature
+          - cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:button-card
+                    template: button
+                    name: Cool
+                    color: var(--yatbi-state-cool-color)
+                    tap_action:
+                      action: call-service
+                      service: light.turn_on
+                      service_data:
+                        entity_id: "[[entity]]"
+                        color_temp: 155
+                  - type: custom:button-card
+                    template: button
+                    name: Neutral
+                    color: var(--yatbi-state-neutral-color)
+                    tap_action:
+                      action: call-service
+                      service: light.turn_on
+                      service_data:
+                        entity_id: "[[entity]]"
+                        color_temp: 300
+                  - type: custom:button-card
+                    template: button
+                    name: Warm
+                    color: var(--yatbi-state-warm-color)
+                    tap_action:
+                      action: call-service
+                      service: light.turn_on
+                      service_data:
+                        entity_id: "[[entity]]"
+                        color_temp: 445

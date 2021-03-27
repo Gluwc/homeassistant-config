@@ -2,32 +2,32 @@ state_entity:
   card:
     type: vertical-stack
     cards:
-    - type: custom:decluttering-card
-      template: header
-      variables:
-      - name: State
-    - type: entities
-      entities:
-      - entity: '[[entity]]'
-        style:
-          ha-paper-dropdown-menu$:
-            paper-menu-button:
-              div:
-                paper-input$:
-                  paper-input-container: |
-                    label {
-                      display: none;
-                    }
-                  paper-input-container$: |
-                    .floated-label-placeholder {
-                      display: none;
-                    }
-                    .underline {
-                      display: none;
-                    }
-                .: |
-                  paper-ripple {
-                    height: 30px;
-                    top: 5px;
-                    left: -5px;
-                  }
+      - type: custom:decluttering-card
+        template: header
+        variables:
+          - name: State
+      - type: entities
+        entities:
+          - entity: "[[entity]]"
+            style:
+              ha-paper-dropdown-menu$:
+                paper-menu-button:
+                  div:
+                    paper-input$:
+                      paper-input-container: |
+                        label {
+                          display: none;
+                        }
+                      paper-input-container$: |
+                        .floated-label-placeholder {
+                          display: none;
+                        }
+                        .underline {
+                          display: none;
+                        }
+                    .: |
+                      paper-ripple {
+                        height: 30px;
+                        top: 5px;
+                        left: -5px;
+                      }
