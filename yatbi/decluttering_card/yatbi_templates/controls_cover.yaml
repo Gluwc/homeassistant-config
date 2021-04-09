@@ -2,83 +2,78 @@ controls_cover:
   card:
     type: vertical-stack
     cards:
-      - type: custom:decluttering-card
-        template: container
-        variables:
-          - name: Position
-          - cards:
-              - type: horizontal-stack
-                cards:
-                  - type: custom:button-card
-                    template: button
-                    name: Open
-                    tap_action:
-                      action: call-service
-                      service: cover.set_cover_position
-                      service_data:
-                        entity_id: "[[entity]]"
-                        position: 100
-                    styles:
-                      card:
-                        - height: 100px
-                        - width: 40px
-                      name:
-                        - writing-mode: vertical-rl
-                        - text-orientation: mixed
-                  - type: custom:stack-in-card
-                    mode: horizontal
-                    keep:
-                      background: true
-                    cards:
-                      - type: custom:button-card
-                        template: button
-                        name: 75%
-                        tap_action:
-                          action: call-service
-                          service: cover.set_cover_position
-                          service_data:
-                            entity_id: "[[entity]]"
-                            position: 75
-                        styles:
-                          card:
-                            - height: 100px
-                      - type: custom:button-card
-                        template: button
-                        name: 50%
-                        tap_action:
-                          action: call-service
-                          service: cover.set_cover_position
-                          service_data:
-                            entity_id: "[[entity]]"
-                            position: 50
-                        styles:
-                          card:
-                            - height: 100px
-                      - type: custom:button-card
-                        template: button
-                        name: 25%
-                        tap_action:
-                          action: call-service
-                          service: cover.set_cover_position
-                          service_data:
-                            entity_id: "[[entity]]"
-                            position: 25
-                        styles:
-                          card:
-                            - height: 100px
-                  - type: custom:button-card
-                    template: button
-                    name: Close
-                    tap_action:
-                      action: call-service
-                      service: cover.set_cover_position
-                      service_data:
-                        entity_id: "[[entity]]"
-                        position: 0
-                    styles:
-                      card:
-                        - height: 100px
-                        - width: 40px
-                      name:
-                        - writing-mode: vertical-rl
-                        - text-orientation: mixed
+    - type: horizontal-stack
+      cards:
+        - type: custom:button-card
+          template: button
+          name: Open
+          tap_action:
+            action: call-service
+            service: cover.set_cover_position
+            service_data:
+              entity_id: "[[entity]]"
+              position: 100
+          styles:
+            card:
+              - height: 100px
+              - width: 40px
+            name:
+              - writing-mode: vertical-rl
+              - text-orientation: mixed
+        - type: custom:stack-in-card
+          mode: horizontal
+          keep:
+            background: true
+          cards:
+            - type: custom:button-card
+              template: button
+              name: 75%
+              tap_action:
+                action: call-service
+                service: cover.set_cover_position
+                service_data:
+                  entity_id: "[[entity]]"
+                  position: 75
+              styles:
+                card:
+                  - height: 100px
+            - type: custom:button-card
+              template: button
+              name: 50%
+              tap_action:
+                action: call-service
+                service: cover.set_cover_position
+                service_data:
+                  entity_id: "[[entity]]"
+                  position: 50
+              styles:
+                card:
+                  - height: 100px
+            - type: custom:button-card
+              template: button
+              name: 25%
+              tap_action:
+                action: call-service
+                service: cover.set_cover_position
+                service_data:
+                  entity_id: "[[entity]]"
+                  position: 25
+              styles:
+                card:
+                  - height: 100px
+        - type: custom:button-card
+          template: button
+          name: Close
+          tap_action:
+            action: call-service
+            service: cover.set_cover_position
+            service_data:
+              entity_id: "[[entity]]"
+              position: 0
+          styles:
+            card:
+              - height: 100px
+              - width: 40px
+            name:
+              - writing-mode: vertical-rl
+              - text-orientation: mixed

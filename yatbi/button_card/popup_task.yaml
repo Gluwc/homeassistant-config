@@ -1,5 +1,5 @@
 popup_task:
-  template: popup
+  template: tile
   tap_action:
     confirmation:
       text: "[[[return `Did you complete ${entity.attributes.friendly_name}?`]]]"
@@ -12,7 +12,7 @@ popup_task:
     action: fire-dom-event
     browser_mod:
       command: popup
-      card: !include includes/nocard.yaml
+      card: !include includes/auto.yaml
       deviceID:
         - this
       hide_header: true

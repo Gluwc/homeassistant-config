@@ -1,10 +1,10 @@
-popup:
+popup_auto_hold:
   template: tile
-  tap_action:
+  hold_action:
     action: fire-dom-event
     browser_mod:
       command: popup
-      card: !include includes/nocard.yaml
+      card: !include includes/auto.yaml
       deviceID:
         - this
       hide_header: true

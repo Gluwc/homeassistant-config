@@ -1,10 +1,14 @@
 container_tiles:
   card:
-    type: vertical-stack
-    cards:
-      - type: custom:decluttering-card
-        template: header
-        variables:
-          - name: "[[name]]"
-      - type: grid
-        cards: "[[cards]]"
+    type: custom:mod-card
+    card_mod:
+      style:
+        hui-grid-card$: |
+          h1 {
+            padding: 8px !IMPORTANT;
+            font-weight: bold !IMPORTANT;
+          }
+    card:
+      type: grid
+      title: "[[name]]"
+      cards: "[[cards]]"

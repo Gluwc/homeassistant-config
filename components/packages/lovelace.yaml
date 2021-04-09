@@ -1,7 +1,6 @@
 lovelace:
   mode: yaml
   resources:
-
     # Yatbi Resources
     - type: module
       url: /hacsfiles/lovelace-card-tools/card-tools.js
@@ -13,6 +12,8 @@ lovelace:
       url: /hacsfiles/button-card/button-card.js
     - type: module
       url: /hacsfiles/decluttering-card/decluttering-card.js
+    - url: /hacsfiles/config-template-card/config-template-card.js
+      type: module
 
     # Other
     - type: module

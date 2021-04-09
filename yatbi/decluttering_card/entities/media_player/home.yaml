@@ -1,6 +1,0 @@
-card_media_home:
-  card:
-    type: vertical-stack
-    cards:
-      - type: custom:button-card
-        color_type: blank-card

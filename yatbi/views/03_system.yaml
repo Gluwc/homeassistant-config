@@ -1,0 +1,11 @@
+- icon: "mdi:cpu-64-bit"
+  path: system
+  title: System
+  cards:
+    - card:
+        title: Unavailable
+        type: entities
+      filter:
+        include:
+          - state: unavailable
+      type: "custom:auto-entities"

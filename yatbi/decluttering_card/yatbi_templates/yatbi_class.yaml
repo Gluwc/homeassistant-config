@@ -1,0 +1,24 @@
+yatbi_class:
+  card:
+    type: custom:mod-card
+    card_mod:
+      style:
+        auto-entities:
+          hui-grid-card$: |
+            h1 {
+              padding: 8px !IMPORTANT;
+              font-weight: bold !IMPORTANT;
+            }
+    card:
+      type: "custom:auto-entities"
+      filter:
+        include:
+          - attributes:
+              yatbi:class: "[[class]]"
+            options:
+              type: "custom:button-card"
+              template: popup_auto
+      card:
+        type: grid
+        title: "[[name]]"
+      card_param: cards

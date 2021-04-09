@@ -9,6 +9,9 @@ popup:
           top: -20px;
           z-index: 1;
         }
+        #root > * {
+          margin: 0px !IMPORTANT;
+        }
     card:
       type: vertical-stack
       cards:
@@ -50,8 +53,16 @@ popup:
             type: vertical-stack
             cards:
               # Popup cards.
-              - type: vertical-stack
-                cards: "[[cards]]"
+              - type: custom:mod-card
+                card_mod:
+                  style:
+                    hui-vertical-stack-card$: |
+                      #root > * {
+                        margin: 0px !IMPORTANT;
+                      }
+                card:
+                  type: vertical-stack
+                  cards: "[[cards]]"
 
               # Close popup button.
               - type: custom:button-card

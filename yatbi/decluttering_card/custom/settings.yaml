@@ -44,3 +44,10 @@ settings:
                   service: script.navigate_to_configuration
                   service_data:
                     navigation_path: /config/dashboard/
+              - type: "custom:button-card"
+                template: tile
+                name: Unavailable Entities
+                icon: mdi:cog
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/2/

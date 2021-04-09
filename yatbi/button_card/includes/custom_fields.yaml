@@ -1,27 +1,99 @@
 status: >
   [[[
-      if (this.state_icon) {
-        return `<ha-icon
-          icon="${this.state_icon}"
-          style="width: 22px; height: 22px; color: var(--primary-text-color);">
-          </ha-icon>`
-      }
-      else if (variables) {
-        if (variables.display_entities){
-          this.display_entities = "";
-          for (const selected_entity in variables.display_entities) {
-            console.log(selected_entity)
+    if (entity) {
+      this.display_entities = "";
+      switch (entity.entity_id.split('.')[0]) {
+        case "light":
+          if ("brightness" in entity.attributes){
             this.display_entities = this.display_entities + `<div
               style="
-              font-size: 14px;
+              font-size: 15px;
               font-weight: var(--yatbi-font-weight);
               text-align: right;
-              color: var(--primary-text-color);
               ">
-              ${Math.round(states[variables.display_entities[selected_entity]].state)}<span style="margin-left: 2px;">${states[variables.display_entities[selected_entity]].attributes.unit_of_measurement}</span>
+              ${Math.round(entity.attributes.brightness / 2.56)}<span style="font-size: 14px; margin-left: 2px;">%</span>
             </div>`
           }
-          return `${this.display_entities}`
+          break
+        case "fan":
+          if ("percentage" in entity.attributes){
+            this.display_entities = this.display_entities + `<div
+              style="
+              font-s1ize: 15px;
+              font-weight: var(--yatbi-font-weight);
+              text-align: right;
+              ">
+              ${Math.round(entity.attributes.percentage)}<span style="font-size: 14px; margin-left: 2px;">%</span>
+            </div>`
+          }
+          break
+        case "climate":
+          if ("temperature" in entity.attributes){
+            this.display_entities = this.display_entities + `<div
+              style="
+              font-size: 15px;
+              font-weight: var(--yatbi-font-weight);
+              text-align: right;
+              ">
+              ${Math.round(entity.attributes.temperature)}<span style="font-size: 14px; margin-left: 2px;">°C</span>
+            </div>`
+          }
+          break
+      }
+      if ("yatbi" in entity.attributes) {
+        if ("entities" in entity.attributes.yatbi){
+          for (const selected_entity in entity.attributes.yatbi.entities) {
+            const selected_entity_id = entity.attributes.yatbi.entities[selected_entity]
+            if (typeof(selected_entity_id) == "object" && selected_entity_id.display == true) {
+              if (!isNaN(states[selected_entity_id.entity].state)) {
+                this.display_entities = this.display_entities + `
+                  <div
+                    style="
+                    font-size: 15px;
+                    font-weight: var(--yatbi-font-weight);
+                    text-align: right;
+                    ">
+                    ${Math.round(states[selected_entity_id.entity].state)}<span style="font-size: 14px; margin-left: 2px;">${states[selected_entity_id.entity].attributes.unit_of_measurement}</span>
+                  </div>
+                `
+              } else if (states[selected_entity_id.entity].attributes.device_class == "motion") {
+                if (states[selected_entity_id.entity].state == "on"){
+                  this.display_entities = this.display_entities + `
+                    <ha-icon icon="mdi:eye"
+                      style="
+                      width: 20px;
+                      height: 20px;
+                      ">
+                    </ha-icon>
+                  `
+                }
+              } else if (states[selected_entity_id.entity].attributes.device_class == "door") {
+                if (states[selected_entity_id.entity].state == "on"){
+                  this.display_entities = this.display_entities + `
+                    <ha-icon icon="mdi:door-open"
+                      style="
+                      width: 20px;
+                      height: 20px;
+                      ">
+                    </ha-icon>
+                  `
+                }
+              } else if (states[selected_entity_id.entity].attributes.device_class == "window") {
+                if (states[selected_entity_id.entity].state == "on"){
+                  this.display_entities = this.display_entities + `
+                    <ha-icon icon="mdi:window-open"
+                      style="
+                      width: 20px;
+                      height: 20px;
+                      ">
+                    </ha-icon>
+                  `
+                }
+              }
+            }
+          }
         }
       }
+      return `${this.display_entities}`
+    }
   ]]]

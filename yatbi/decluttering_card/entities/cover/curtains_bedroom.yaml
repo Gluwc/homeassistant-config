@@ -1,8 +1,0 @@
-cover.curtains_bedroom:
-  card:
-    type: vertical-stack
-    cards:
-      - type: custom:decluttering-card
-        template: controls_cover
-        variables:
-          - entity: cover.curtains_bedroom

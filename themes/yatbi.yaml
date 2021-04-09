@@ -10,44 +10,47 @@ yatbi:
         background: #060606CC;
         border-radius: 8px;
       }
+      .mdc-dialog__content::-webkit-scrollbar {
+        display: none;
+      }
 
   # Main colors
-  primary-color: '#4788d4'
-  accent-color: '#db9c1f'
-  dark-primary-color: 'var(--accent-color)'
-  light-primary-color: 'var(--accent-color)'
+  primary-color: "#4788d4"
+  accent-color: "#db9c1f"
+  dark-primary-color: "var(--accent-color)"
+  light-primary-color: "var(--accent-color)"
   state-icon-color: var(--primary-text-color)
 
   # Cards
-  ha-card-border-radius: '8px'
+  ha-card-border-radius: "8px"
   ha-card-box-shadow: none
 
   # Text colors
-  primary-text-color: '#ddd'
-  text-primary-color: 'var(--primary-text-color)'
-  secondary-text-color: 'var(--primary-color)'
-  disabled-text-color: '#666666'
+  primary-text-color: "#ddd"
+  text-primary-color: "var(--primary-text-color)"
+  secondary-text-color: "var(--primary-color)"
+  disabled-text-color: "#666666"
 
   # Background colors
-  primary-background-color: '#060606'
-  secondary-background-color: '#111'
-  divider-color: 'rgba(0, 0, 0, .12)'
+  primary-background-color: "#060606"
+  secondary-background-color: "#111"
+  divider-color: "rgba(0, 0, 0, .12)"
 
   # Table rows
-  table-row-background-color: '#222'
-  table-row-alternative-background-color: '#222'
-  data-table-background-color: '#222'
+  table-row-background-color: "#222"
+  table-row-alternative-background-color: "#222"
+  data-table-background-color: "#222"
 
   # Nav Menu
-  paper-listbox-color: 'var(--primary-text-color)'
-  paper-listbox-background-color: '#222'
-  paper-grey-50: 'var(--primary-text-color)'
-  paper-grey-200: '#555'
+  paper-listbox-color: "var(--primary-text-color)"
+  paper-listbox-background-color: "#222"
+  paper-grey-50: "var(--primary-text-color)"
+  paper-grey-200: "#555"
 
   # Paper card
-  card-header-color: 'var(--accent-color)'
-  card-background-color: '#1C1C1C'
-  paper-item-icon-color: 'var(--primary-text-color)'
+  card-header-color: "var(--accent-color)"
+  card-background-color: "#1C1C1C"
+  paper-item-icon-color: "var(--primary-text-color)"
 
   # Switches
   paper-toggle-button-checked-button-color: var(--accent-color)
@@ -82,18 +85,18 @@ yatbi:
   # Backdrop Blur
   dialog-backdrop-filter: blur(5px)
 
-  switch-unchecked-button-color: '#333'
+  switch-unchecked-button-color: "#333"
 
   # YATBI
-  yatbi-green: '#3A4'
-  yatbi-yellow: '#DA4'
-  yatbi-red: '#c33'
+  yatbi-green: "#3A4"
+  yatbi-yellow: "#DA4"
+  yatbi-red: "#c33"
   yatbi-alert: red
-  yatbi-state-warm-color: '#D70'
+  yatbi-state-warm-color: "#D70"
   yatbi-state-heating-color: var(--yatbi-state-warm-color)
-  yatbi-state-cool-color: '#2AB'
+  yatbi-state-cool-color: "#2AB"
   yatbi-state-cooling-color: var(--yatbi-state-cool-color)
-  yatbi-state-neutral-color: '#CBA'
+  yatbi-state-neutral-color: "#CBA"
   yatbi-state-night-color: var(--light-primary-color)
   yatbi-state-occupied-color: var(--yatbi-state-night-color)
   yatbi-state-unavailable-color: var(--yatbi-alert)
@@ -103,4 +106,4 @@ yatbi:
   yatbi-task-incomplete-color: var(--yatbi-red)
   yatbi-task-complete-color: var(--yatbi-green)
   yatbi-font-weight: bold
-  yatbi-button-close-popup-color: '#333'
+  yatbi-button-close-popup-color: "#333"

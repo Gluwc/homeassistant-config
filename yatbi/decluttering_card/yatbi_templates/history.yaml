@@ -1,11 +1,17 @@
 history:
   card:
-    type: vertical-stack
-    cards:
-      - type: custom:decluttering-card
-        template: header
-        variables:
-          - name: History
-      - type: history-graph
-        entities:
-          - "[[entity]]"
+    type: custom:mod-card
+    card_mod:
+      style:
+        hui-vertical-stack-card$: |
+          h1 {
+            padding: 8px !IMPORTANT;
+            font-weight: bold !IMPORTANT;
+          }
+    card:
+      type: vertical-stack
+      title: History
+      cards:
+        - type: history-graph
+          entities:
+            - "[[entity]]"

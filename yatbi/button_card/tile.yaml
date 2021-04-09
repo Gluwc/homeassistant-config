@@ -3,11 +3,21 @@ tile:
   show_state: true
   size: 28px
   aspect_ratio: 1/1
+  triggers_update: all
   styles:
     card:
       - background-position: 50% 50%
       - background-size: cover
       - padding: 8px
+      - background-image: >
+          [[[
+            if (entity != undefined) {
+              if ("yatbi" in entity.attributes) {
+                if ("background-image" in entity.attributes.yatbi)
+                  return `${entity.attributes.yatbi['background-image']}`
+              }
+            }
+          ]]]
     grid:
       - grid-template-areas: '"i status" "n n" "s s" "l l"'
       - grid-template-columns: 1fr 1fr

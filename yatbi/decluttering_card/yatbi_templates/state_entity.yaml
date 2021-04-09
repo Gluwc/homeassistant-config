@@ -1,33 +1,39 @@
 state_entity:
   card:
-    type: vertical-stack
-    cards:
-      - type: custom:decluttering-card
-        template: header
-        variables:
-          - name: State
-      - type: entities
-        entities:
-          - entity: "[[entity]]"
-            style:
-              ha-paper-dropdown-menu$:
-                paper-menu-button:
-                  div:
-                    paper-input$:
-                      paper-input-container: |
-                        label {
-                          display: none;
+    type: custom:mod-card
+    card_mod:
+      style:
+        hui-vertical-stack-card$: |
+          h1 {
+            padding: 8px !IMPORTANT;
+            font-weight: bold !IMPORTANT;
+          }
+    card:
+      type: vertical-stack
+      title: State
+      cards:
+        - type: entities
+          entities:
+            - entity: "[[entity]]"
+              style:
+                ha-paper-dropdown-menu$:
+                  paper-menu-button:
+                    div:
+                      paper-input$:
+                        paper-input-container: |
+                          label {
+                            display: none;
+                          }
+                        paper-input-container$: |
+                          .floated-label-placeholder {
+                            display: none;
+                          }
+                          .underline {
+                            display: none;
+                          }
+                      .: |
+                        paper-ripple {
+                          height: 30px;
+                          top: 5px;
+                          left: -5px;
                         }
-                      paper-input-container$: |
-                        .floated-label-placeholder {
-                          display: none;
-                        }
-                        .underline {
-                          display: none;
-                        }
-                    .: |
-                      paper-ripple {
-                        height: 30px;
-                        top: 5px;
-                        left: -5px;
-                      }

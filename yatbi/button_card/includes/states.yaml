@@ -133,22 +133,24 @@
     [[[
       var time = 0;
       if(entity) {
-        for (var a in entity.attributes) {
-          switch(a) {
-            case "task_seconds":
-              time = entity.attributes.task_seconds;
-              continue;
-            case "task_minutes":
-              time = time + entity.attributes.task_minutes * 60;
-              continue;
-            case "task_hours":
-              time = time + entity.attributes.task_hours * 3600;
-              continue;
-            case "task_days":
-              time = time + entity.attributes.task_days * 86400;
-              continue;
-            case "task_months":
-              time = time + entity.attributes.task_months * 2592000;
+        if ("yatbi" in entity.attributes){
+          for (var a in entity.attributes.yatbi) {
+            switch(a) {
+              case "task_seconds":
+                time = entity.attributes.yatbi.task_seconds;
+                continue;
+              case "task_minutes":
+                time = time + entity.attributes.yatbi.task_minutes * 60;
+                continue;
+              case "task_hours":
+                time = time + entity.attributes.yatbi.task_hours * 3600;
+                continue;
+              case "task_days":
+                time = time + entity.attributes.yatbi.task_days * 86400;
+                continue;
+              case "task_months":
+                time = time + entity.attributes.yatbi.task_months * 2592000;
+            }
           }
         }
         if(Date.parse(entity.state) + (time * 1000) > Date.now() && time != 0) {
@@ -164,22 +166,24 @@
     [[[
       var time = 0;
       if(entity) {
-        for (var a in entity.attributes) {
-          switch(a) {
-            case "task_seconds":
-              time = entity.attributes.task_seconds;
-              continue;
-            case "task_minutes":
-              time = time + entity.attributes.task_minutes * 60;
-              continue;
-            case "task_hours":
-              time = time + entity.attributes.task_hours * 3600;
-              continue;
-            case "task_days":
-              time = time + entity.attributes.task_days * 86400;
-              continue;
-            case "task_months":
-              time = time + entity.attributes.task_months * 2592000;
+        if ("yatbi" in entity.attributes){
+          for (var a in entity.attributes.yatbi) {
+            switch(a) {
+              case "task_seconds":
+                time = entity.attributes.yatbi.task_seconds;
+                continue;
+              case "task_minutes":
+                time = time + entity.attributes.yatbi.task_minutes * 60;
+                continue;
+              case "task_hours":
+                time = time + entity.attributes.yatbi.task_hours * 3600;
+                continue;
+              case "task_days":
+                time = time + entity.attributes.yatbi.task_days * 86400;
+                continue;
+              case "task_months":
+                time = time + entity.attributes.yatbi.task_months * 2592000;
+            }
           }
         }
         if(Date.parse(entity.state) + (time * 1000) < Date.now() && time != 0) {
