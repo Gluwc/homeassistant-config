@@ -19,7 +19,7 @@ status: >
           if ("percentage" in entity.attributes){
             this.display_entities = this.display_entities + `<div
               style="
-              font-s1ize: 15px;
+              font-size: 15px;
               font-weight: var(--yatbi-font-weight);
               text-align: right;
               ">
@@ -41,6 +41,21 @@ status: >
           break
       }
       if ("yatbi" in entity.attributes) {
+        if ("notifications_entity" in entity.attributes.yatbi) {
+          const notification_count = Math.round(states[entity.attributes.yatbi.notifications_entity].state)
+          if (notification_count > 0) {
+            this.display_entities = this.display_entities + `
+              <ha-icon icon="mdi:numeric-${notification_count}-box"
+                style="
+                width: 24px;
+                height: 24px;
+                color: red;
+                margin-left: 10px;
+                ">
+              </ha-icon>
+            `
+          }
+        }
         if ("entities" in entity.attributes.yatbi){
           for (const selected_entity in entity.attributes.yatbi.entities) {
             const selected_entity_id = entity.attributes.yatbi.entities[selected_entity]

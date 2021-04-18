@@ -1,5 +1,3 @@
-card:
-- filter: grayscale(100%)
 name:
 - filter: opacity(35%)
 icon:

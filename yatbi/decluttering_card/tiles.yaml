@@ -1,4 +1,4 @@
-container_tiles:
+tiles:
   card:
     type: custom:mod-card
     card_mod:

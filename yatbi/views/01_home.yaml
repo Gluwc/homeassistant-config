@@ -31,7 +31,7 @@
 
         # Settings
         - type: custom:decluttering-card
-          template: container_tiles
+          template: tiles
           variables:
             - name: System
             - cards:

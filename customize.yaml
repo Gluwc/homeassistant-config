@@ -1,100 +1,134 @@
-binary_sensor.lucas_pc_power_status:
-  device_class: power
-binary_sensor.pc_lucas:
-  device_class: power
-  icon: mdi:desktop-tower
-  friendly_name: PC
-sensor.gas_home:
-  friendly_name: Gas
-sensor.electricity_home:
-  friendly_name: Electricity
-switch.pc_lucas:
-  friendly_name: PC Lucas
-  icon: mdi:desktop-tower
+---
 binary_sensor.contact_door_kitchen:
+  device_class: door
+binary_sensor.contact_system_closet_bedroom:
   device_class: door
 binary_sensor.contact_window_left_living_room:
   device_class: window
 binary_sensor.contact_window_right_living_room:
   device_class: window
-binary_sensor.contact_system_closet_bedroom:
-  device_class: door
-
-################################################################
-# YATBI CONFIG
-################################################################
-
-# Person
-input_select.person_lucas:
-  yatbi:
-    class: person
-    background-image: url('/local/person/lucas/picture.png')
-    entities:
-      - entity: sensor.battery_phone_lucas
-        display: true
-      - switch.pc_lucas
-      - sensor.location_phone_lucas
-      - device_tracker.gps_lucas
-input_select.person_elisa:
-  yatbi:
-    class: person
-    background-image: url('/local/person/elisa/picture.png')
-    entities:
-      - entity: sensor.battery_phone_elisa
-        display: true
-      - sensor.location_phone_elisa
-      - device_tracker.gps_elisa
-
-#Tasks
-input_datetime.task_cleaned_amduat:
-  yatbi:
-    class: task
-    task_time: "60"
-input_datetime.task_fleadrops_pluis:
-  yatbi:
-    class: task
-    task_months: "3"
-input_datetime.task_fleadrops_iera:
-  yatbi:
-    class: task
-    task_months: "3"
-input_datetime.task_fleadrops_luna:
-  yatbi:
-    class: task
-    task_months: "3"
-input_datetime.task_litter_cats:
-  yatbi:
-    class: task
-    task_days: "7"
+binary_sensor.lucas_pc_power_status:
+  device_class: power
+binary_sensor.pc_lucas:
+  device_class: power
+  friendly_name: PC
+  icon: mdi:desktop-tower
+camera.living_room:
+  friendly_name: Camera Living Room
 input_datetime.task_clean_amduat:
   yatbi:
     class: task
-    task_months: "1"
+    task_months: '1'
+input_datetime.task_clean_bathroom:
+  yatbi:
+    class: task
+    task_days: '7'
+input_datetime.task_clean_bedroom:
+  yatbi:
+    class: task
+    task_days: '7'
+input_datetime.task_clean_fridge:
+  yatbi:
+    class: task
+    task_days: '30'
 input_datetime.task_clean_ghost:
   yatbi:
     class: task
-    task_months: "1"
-input_datetime.task_clean_naga:
+    task_months: '1'
+input_datetime.task_clean_kitchen:
   yatbi:
     class: task
-    task_months: "1"
+    task_days: '7'
 input_datetime.task_clean_living_room:
   yatbi:
     class: task
-    task_days: "7"
-
-# Area
-input_select.area_home:
+    task_days: '7'
+input_datetime.task_clean_naga:
   yatbi:
-    class: area
+    class: task
+    task_months: '1'
+input_datetime.task_clean_toilet:
+  yatbi:
+    class: task
+    task_days: '7'
+input_datetime.task_cleaned_amduat:
+  yatbi:
+    class: task
+    task_days: '60'
+input_datetime.task_covers_bedroom:
+  yatbi:
+    class: task
+    task_days: '14'
+input_datetime.task_fleadrops_iera:
+  yatbi:
+    class: task
+    task_months: '3'
+input_datetime.task_fleadrops_luna:
+  yatbi:
+    class: task
+    task_months: '3'
+input_datetime.task_fleadrops_pluis:
+  yatbi:
+    class: task
+    task_months: '3'
+input_datetime.task_litter_cats:
+  yatbi:
+    class: task
+    task_days: '7'
+input_select.animal_amduat:
+  yatbi:
+    background-image: url('/local/animals/amduat/picture.png')
+    class: animal
     entities:
-      - input_select.area_living_room
-      - input_select.person_lucas
-      - input_select.person_elisa
-      - climate.home
-      - entity: sensor.climate_temperature_home
-        display: true
-
+      - display: true
+        entity: sensor.climate_temperature_amduat
+      - display: true
+        entity: sensor.climate_humidity_amduat
+      - light.terrarium_amduat
+      - sensor.climate_terrarium_amduat_absolutehumidity
+input_select.animal_ghost:
+  yatbi:
+    background-image: url('/local/animals/ghost/picture.png')
+    class: animal
+    entities:
+      - display: true
+        entity: sensor.climate_temperature_ghost
+      - display: true
+        entity: sensor.climate_humidity_ghost
+      - light.terrarium_ghost
+      - sensor.climate_terrarium_ghost_absolutehumidity
+input_select.animal_iera:
+  yatbi:
+    background-image: url('/local/animals/iera/picture.png')
+    class: animal
+    entities:
+      - input_datetime.task_fleadrops_iera
+      - input_datetime.task_litter_cats
+input_select.animal_luna:
+  yatbi:
+    background-image: url('/local/animals/luna/picture.png')
+    class: animal
+    entities:
+      - input_datetime.task_fleadrops_luna
+      - binary_sensor.contact_food_bin_luna
+input_select.animal_naga:
+  yatbi:
+    background-image: url('/local/animals/naga/picture.png')
+    class: animal
+    entities:
+      - display: true
+        entity: sensor.climate_temperature_naga
+      - display: true
+        entity: sensor.climate_humidity_naga
+      - light.terrarium_naga
+      - sensor.climate_terrarium_naga_absolutehumidity
+input_select.animal_pluis:
+  yatbi:
+    background-image: url('/local/animals/pluis/picture.png')
+    class: animal
+    entities:
+      - input_datetime.task_fleadrops_pluis
+      - input_datetime.task_litter_cats
 input_select.area_bathroom:
   yatbi:
     class: area
@@ -102,11 +136,12 @@ input_select.area_bathroom:
       - light.group_bathroom
       - sensor.temperature_motion_bathroom
       - sensor.lux_motion_bathroom
-      - entity: sensor.climate_temperature_motion_bathroom
-        display: true
-      - entity: binary_sensor.motion_bathroom
-        display: true
-
+      - display: true
+        entity: sensor.climate_temperature_motion_bathroom
+      - display: true
+        entity: binary_sensor.motion_bathroom
+      - input_datetime.task_clean_bathroom
+    notifications_entity: input_number.notifications_area_bathroom
 input_select.area_bedroom:
   yatbi:
     class: area
@@ -114,16 +149,25 @@ input_select.area_bedroom:
       - light.group_bedroom
       - switch.air_purifier_bedroom
       - binary_sensor.smoke_detector_smoke_detected
-
+      - input_datetime.task_clean_bedroom
+      - input_datetime.task_covers_bedroom
+    notifications_entity: input_number.notifications_area_bedroom
 input_select.area_hallway:
   yatbi:
     entities:
       - light.group_hallway
-      - entity: sensor.climate_temperature_motion_hallway
-        display: true
-      - entity: binary_sensor.motion_hallway
-        display: true
-
+      - display: true
+        entity: sensor.climate_temperature_motion_hallway
+      - display: true
+        entity: binary_sensor.motion_hallway
+input_select.area_home:
+  yatbi:
+    class: area
+    entities:
+      - input_select.area_living_hallway
+      - climate.home
+      - display: true
+        entity: sensor.climate_temperature_home
 input_select.area_kitchen:
   yatbi:
     class: area
@@ -132,13 +176,16 @@ input_select.area_kitchen:
       - binary_sensor.motion_hallway_kitchen
       - sensor.lux_motion_kitchen
       - sensor.lux_motion_hallway_kitchen
-      - entity: sensor.climate_temperature_motion_kitchen
-        display: true
-      - entity: binary_sensor.motion_kitchen
-        display: true
-      - entity: binary_sensor.contact_door_kitchen
-        display: true
-
+      - display: true
+        entity: sensor.climate_temperature_motion_kitchen
+      - display: true
+        entity: binary_sensor.motion_kitchen
+      - display: true
+        entity: binary_sensor.contact_door_kitchen
+      - vacuum.neato
+      - input_datetime.task_clean_kitchen
+      - input_datetime.task_clean_fridge
+    notifications_entity: input_number.notifications_area_kitchen
 input_select.area_living_room:
   yatbi:
     class: area
@@ -153,85 +200,62 @@ input_select.area_living_room:
       - input_datetime.task_clean_living_room
       - media_player.stereo
       - camera.living_room
-      - entity: sensor.climate_temperature_motion_living_room
-        display: true
-      - entity: binary_sensor.contact_window_left_living_room
-        display: true
-      - entity: binary_sensor.contact_window_right_living_room
-        display: true
-      - entity: binary_sensor.motion_living_room
-        display: true
-
+      - display: true
+        entity: sensor.climate_temperature_motion_living_room
+      - display: true
+        entity: binary_sensor.contact_window_left_living_room
+      - display: true
+        entity: binary_sensor.contact_window_right_living_room
+      - display: true
+        entity: binary_sensor.motion_living_room
+    notifications_entity: input_number.notifications_area_living_room
 input_select.area_toilet:
   yatbi:
     class: area
     entities:
       - light.group_toilet
       - sensor.lux_motion_toilet
-      - entity: sensor.climate_temperature_motion_toilet
-        display: true
-      - entity: binary_sensor.motion_toilet
-        display: true
-
-# Animal
-input_select.animal_amduat:
+      - display: true
+        entity: sensor.climate_temperature_motion_toilet
+      - display: true
+        entity: binary_sensor.motion_toilet
+      - input_datetime.task_clean_toilet
+    notifications_entity: input_number.notifications_area_toilet
+input_select.person_elisa:
   yatbi:
-    class: animal
-    background-image: url('/local/animals/amduat/picture.png')
+    background-image: url('/local/person/elisa/picture.png')
+    class: person
     entities:
-      - entity: sensor.climate_temperature_warm_amduat
-        display: true
-      - entity: sensor.climate_humidity_warm_amduat
-        display: true
-      - light.terrarium_amduat
-input_select.animal_ghost:
+      - display: true
+        entity: sensor.battery_phone_elisa
+      - sensor.location_phone_elisa
+      - device_tracker.gps_elisa
+input_select.person_lucas:
   yatbi:
-    class: animal
-    background-image: url('/local/animals/ghost/picture.png')
+    background-image: url('/local/person/lucas/picture.png')
+    class: person
     entities:
-      - entity: sensor.climate_temperature_warm_ghost
-        display: true
-      - entity: sensor.climate_humidity_warm_ghost
-        display: true
-      - light.terrarium_ghost
-input_select.animal_naga:
-  yatbi:
-    class: animal
-    background-image: url('/local/animals/naga/picture.png')
-    entities:
-      - entity: sensor.climate_temperature_warm_naga
-        display: true
-      - entity: sensor.climate_humidity_warm_naga
-        display: true
-      - light.terrarium_naga
-input_select.animal_luna:
-  yatbi:
-    class: animal
-    background-image: url('/local/animals/luna/picture.png')
-    entities:
-      - input_datetime.task_fleadrops_luna
-      - binary_sensor.contact_food_bin_luna
-
-input_select.animal_iera:
-  yatbi:
-    class: animal
-    background-image: url('/local/animals/iera/picture.png')
-    entities:
-      - input_datetime.task_fleadrops_iera
-      - input_datetime.task_litter_cats
-
-input_select.animal_pluis:
-  yatbi:
-    class: animal
-    background-image: url('/local/animals/pluis/picture.png')
-    entities:
-      - input_datetime.task_fleadrops_pluis
-      - input_datetime.task_litter_cats
-
-# Living Room
+      - display: true
+        entity: sensor.battery_phone_lucas
+      - switch.pc_lucas
+      - sensor.location_phone_lucas
+      - device_tracker.gps_lucas
 light.group_living_room:
   yatbi:
     entities:
       - light.desk_living_room
       - light.tv_living_room
       - light.couch_living_room
+sensor.climate_terrarium_amduat_absolutehumidity:
+  friendly_name: Amduat Absolute Humidity
+sensor.climate_terrarium_ghost_absolutehumidity:
+  friendly_name: Ghost Absolute Humidity
+sensor.climate_terrarium_naga_absolutehumidity:
+  friendly_name: Naga Absolute Humidity
+sensor.electricity_home:
+  friendly_name: Electricity
+sensor.gas_home:
+  friendly_name: Gas
+switch.pc_lucas:
+  friendly_name: PC Lucas
+  icon: mdi:desktop-tower

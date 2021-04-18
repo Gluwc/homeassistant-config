@@ -21,6 +21,10 @@ card:
               if (typeof(selected_entity_id) == "object") {
                 selected_entity_id = selected_entity_id["entity"]
               }
+              let name = selected_entity_id
+              if (states[selected_entity_id]) {
+                name = states[selected_entity_id].attributes.friendly_name.replace(entity.attributes.friendly_name, "")
+              }
               switch (selected_entity_id.startsWith('input_datetime.task')) {
                 case true:
                   const object =
@@ -29,7 +33,8 @@ card:
                       "options":
                         {
                           "type": "custom:button-card",
-                          "template": "popup_task"
+                          "template": "popup_task",
+                          "name": name
                         }
                     }
                   this.entities.push(object)

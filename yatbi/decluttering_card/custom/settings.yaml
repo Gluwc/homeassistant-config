@@ -3,7 +3,7 @@ settings:
     type: vertical-stack
     cards:
       - type: custom:decluttering-card
-        template: container_tiles
+        template: tiles
         variables:
           - name: Lovelace
           - cards:
@@ -22,7 +22,7 @@ settings:
                   action: call-service
                   service: frontend.reload_themes
       - type: custom:decluttering-card
-        template: container_tiles
+        template: tiles
         variables:
           - name: Home Assistant
           - cards:
@@ -51,3 +51,11 @@ settings:
                 tap_action:
                   action: navigate
                   navigation_path: /lovelace/2/
+              - type: "custom:button-card"
+                template: popup_custom
+                name: Automations
+                icon: mdi:cog
+                variables:
+                  name: Automations
+                  template: automations
+

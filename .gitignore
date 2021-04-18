@@ -11,3 +11,6 @@ home-assistant_v2.db
 options.xml
 zwcfg_0xf1bfebd0.xml
 zwscene.xml
+deps
+tts
+blueprints

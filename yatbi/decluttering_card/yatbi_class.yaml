@@ -11,6 +11,7 @@ yatbi_class:
             }
     card:
       type: "custom:auto-entities"
+      show_empty: false
       filter:
         include:
           - attributes:

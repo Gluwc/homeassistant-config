@@ -15,6 +15,64 @@
 * [Unifi Controller](https://hub.docker.com/r/jacobalberty/unifi)
 * [zwavejs2mqtt](https://hub.docker.com/r/zwavejs/zwavejs2mqtt)
 
+## Devices
+
+### USB
+|Manufacturer|Model|Amount|
+|---|---|---|
+|Dresden Elektronik|Conbee II|1|
+|Schelte Bron|OpenTherm Gateway|1|
+|Z-Wave.Me|UZB|1|
+
+
+### ZWave
+|Manufacturer|Model|Amount|
+|---|---|---|
+|AEON Labs|ZW099|1|
+|Everspring|AD147|2|
+
+### Zigbee
+|Manufacturer|Model|Amount|
+|---|---|---|
+|IKEA of Sweden|TRADFRI control outlet|3|
+|IKEA of Sweden|TRADFRI Driver 10W|1|
+|IKEA of Sweden|TRADFRI motion sensor|1|
+|IKEA of Sweden|TRADFRI transformer 10W|2|
+|LUMI|lumi.curtain|2|
+|LUMI|lumi.sensor_magnet.aq2|5|
+|LUMI|lumi.sensor_motion|2|
+|LUMI|lumi.sensor_switch.aq2|4|
+|LUMI|lumi.weather|5|
+|OSRAM|Plug 01|1|
+|Philips|HML006|2|
+|Philips|LLC020|1|
+|Philips|LST002|1|
+|Philips|LTW001|3|
+|Philips|LTW012|2|
+|Philips|LTW013|8|
+|Philips|LWB010|2|
+|Philips|PHDL00|1|
+|Philips|RWL021|5|
+|Philips|SML001|6|
+
+### Wifi
+|Manufacturer|Model|Amount|
+|---|---|---|
+|Allterco|Shelly 1|1|
+|Dyson|438|1|
+|espressif|Espressif ESP-WROVER-KIT|1|
+|Google Inc.|Chromecast Audio|1|
+|Google Inc.|Chromecast|1|
+|Google Inc.|Google Home Mini|1|
+|Google Inc.|Google Home|1|
+|Google Inc.|Google Nest Mini|1|
+|Google|Pixel 4|1|
+|Logitech|Harmony Hub|1|
+|Neato|BotVacD7Connected|1|
+|Samsung|SM-T720|1|
+|Sony|H8324|1|
+|Sony|KD-55XF8096|1|
+
 ## YATBI (Yet Another Tile Based Interface)
 
 ![screenshot](https://github.com/Gluwc/homeassistant-config/blob/master/yatbi/images/yatbi.PNG)

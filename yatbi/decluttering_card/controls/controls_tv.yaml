@@ -1,0 +1,68 @@
+controls_tv:
+  card:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:button-card
+            template: button
+            icon: mdi:volume-low
+            size: 25px
+            name: 5
+            styles:
+              card:
+              - height: 60px
+            tap_action:
+              action: call-service
+              service: media_player.volume_set
+              service_data:
+                entity_id: "[[entity]]"
+                volume_level: 0.05
+          - type: custom:button-card
+            template: button
+            icon: mdi:volume-medium
+            size: 25px
+            name: 10
+            styles:
+              card:
+              - height: 60px
+            tap_action:
+              action: call-service
+              service: media_player.volume_set
+              service_data:
+                entity_id: "[[entity]]"
+                volume_level: 0.1
+          - type: custom:button-card
+            template: button
+            icon: mdi:volume-high
+            size: 25px
+            name: 15
+            styles:
+              card:
+              - height: 60px
+            tap_action:
+              action: call-service
+              service: media_player.volume_set
+              service_data:
+                entity_id: "[[entity]]"
+                volume_level: 0.15
+      - type: horizontal-stack
+        cards:
+          - type: custom:button-card
+            template: button
+            icon: mdi:volume-minus
+            size: 25px
+            tap_action:
+              action: call-service
+              service: media_player.volume_down
+              service_data:
+                entity_id: "[[entity]]"
+          - type: custom:button-card
+            template: button
+            icon: mdi:volume-plus
+            size: 25px
+            tap_action:
+              action: call-service
+              service: media_player.volume_up
+              service_data:
+                entity_id: "[[entity]]"

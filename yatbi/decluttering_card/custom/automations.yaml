@@ -1,0 +1,29 @@
+automations:
+  card:
+    type: vertical-stack
+    cards:
+    - type: custom:mod-card
+      card_mod:
+        style:
+          auto-entities:
+            hui-grid-card$: |
+              h1 {
+                padding: 8px !IMPORTANT;
+                font-weight: bold !IMPORTANT;
+              }
+      card:
+        type: "custom:auto-entities"
+        show_empty: false
+        sort:
+          method: entity_id
+        filter:
+          include:
+            - entity_id: input_boolean.automation*
+              options:
+                type: "custom:button-card"
+                template: popup_auto_hold
+        card:
+          type: grid
+          title: Automations
+        card_param: cards
+
