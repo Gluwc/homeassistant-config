@@ -14,3 +14,6 @@ zwscene.xml
 deps
 tts
 blueprints
+google_calendars.yaml
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal

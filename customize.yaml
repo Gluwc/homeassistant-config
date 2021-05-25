@@ -141,6 +141,7 @@ input_select.area_bathroom:
       - display: true
         entity: binary_sensor.motion_bathroom
       - input_datetime.task_clean_bathroom
+      - input_select.area_mirror_bathroom
     notifications_entity: input_number.notifications_area_bathroom
 input_select.area_bedroom:
   yatbi:
@@ -164,7 +165,7 @@ input_select.area_home:
   yatbi:
     class: area
     entities:
-      - input_select.area_living_hallway
+      - input_select.area_hallway
       - climate.home
       - display: true
         entity: sensor.climate_temperature_home
@@ -240,6 +241,7 @@ input_select.person_lucas:
       - switch.pc_lucas
       - sensor.location_phone_lucas
       - device_tracker.gps_lucas
+
 light.group_living_room:
   yatbi:
     entities:
