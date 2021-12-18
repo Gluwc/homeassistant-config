@@ -27,7 +27,6 @@ card:
                 name = states[selected_entity_id].attributes.friendly_name.replace(entity.attributes.friendly_name, "")
               }
               switch (selected_entity_id.split(".")[0]) {
-                case "fan":
                 case "switch":
                   object =
                     {

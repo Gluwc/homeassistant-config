@@ -192,3 +192,19 @@
       }
     ]]]
   color: var(--yatbi-task-incomplete-color)
+
+# task incomplete
+- operator: template
+  value: >
+    [[[
+      if(entity) {
+        if ("yatbi" in entity.attributes) {
+          if ("class" in entity.attributes.yatbi) {
+            if (entity.attributes.yatbi.class == "task") {
+              return true
+            }
+          }
+        }
+      }
+    ]]]
+  color: var(--primary-color)

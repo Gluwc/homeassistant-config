@@ -1,4 +1,4 @@
-history:
+statistics:
   card:
     type: custom:mod-card
     card_mod:
@@ -9,13 +9,11 @@ history:
             font-weight: bold !IMPORTANT;
           }
     card:
+
       type: vertical-stack
-      title: History
+      title: Statistics
       cards:
-        - type: history-graph
-          entities:
-            - "[[entity]]"
         - type: statistics-graph
-          days_to_show: 1
+          days_to_show: 3
           entities:
             - "[[entity]]"

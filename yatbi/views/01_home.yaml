@@ -29,6 +29,13 @@
             - class: animal
             - name: Animals
 
+        # Snakes
+        - type: custom:decluttering-card
+          template: yatbi_class
+          variables:
+            - class: snake
+            - name: Snakes
+
         # Settings
         - type: custom:decluttering-card
           template: tiles
