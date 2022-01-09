@@ -1,0 +1,196 @@
+input_datetime.task_clean_amduat:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_clean_bathroom:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_clean_bedroom:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_clean_fridge:
+  yatbi:
+    class: task
+    task_days: "30"
+input_datetime.task_clean_ghost:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_clean_kitchen:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_clean_living_room:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_clean_naga:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_clean_aikana:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_clean_tub_1:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_clean_tub_2:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_clean_tub_3:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_clean_tub_4:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_clean_toilet:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_covers_bedroom:
+  yatbi:
+    class: task
+    task_days: "14"
+input_datetime.task_feed_amduat:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_feed_ghost:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_feed_naga:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_feed_aikana:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_feed_tub_1:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_feed_tub_2:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_feed_tub_3:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_feed_tub_4:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_fleadrops_iera:
+  yatbi:
+    class: task
+    task_months: "3"
+input_datetime.task_fleadrops_luna:
+  yatbi:
+    class: task
+    task_months: "3"
+input_datetime.task_fleadrops_pluis:
+  yatbi:
+    class: task
+    task_months: "3"
+input_datetime.task_litter_cats:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_shed_amduat:
+  yatbi:
+    class: task
+input_datetime.task_shed_aikana:
+  yatbi:
+    class: task
+input_datetime.task_shed_naga:
+  yatbi:
+    class: task
+input_datetime.task_shed_ghost:
+  yatbi:
+    class: task
+input_datetime.task_shed_tub_1:
+  yatbi:
+    class: task
+input_datetime.task_shed_tub_2:
+  yatbi:
+    class: task
+input_datetime.task_shed_tub_3:
+  yatbi:
+    class: task
+input_datetime.task_shed_tub_4:
+  yatbi:
+    class: task
+input_datetime.task_poop_amduat:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_poop_aikana:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_poop_naga:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_poop_ghost:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_poop_tub_1:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_poop_tub_2:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_poop_tub_3:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_poop_tub_4:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_amduat:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_aikana:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_naga:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_ghost:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_tub_1:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_tub_2:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_tub_3:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_tub_4:
+  yatbi:
+    class: task
+    task_days: "7"

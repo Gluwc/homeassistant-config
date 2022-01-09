@@ -1,0 +1,20 @@
+input_select.person_elisa:
+  yatbi:
+    background-image: url('/local/person/elisa/picture.png')
+    class: person
+    entities:
+      - display: true
+        entity: sensor.battery_phone_elisa
+      - sensor.location_phone_elisa
+      - device_tracker.gps_elisa
+      - sensor.travel_time_elisa
+input_select.person_lucas:
+  yatbi:
+    background-image: url('/local/person/lucas/picture.png')
+    class: person
+    entities:
+      - display: true
+        entity: sensor.battery_phone_lucas
+      - switch.pc_lucas
+      - sensor.location_phone_lucas
+      - device_tracker.gps_lucas

@@ -1,0 +1,14 @@
+fix_tv_volume:
+  alias: Fix TV Volume
+  sequence:
+  - service: media_player.volume_set
+    target:
+      entity_id: media_player.tv
+    data:
+      volume_level: 0.1
+  - service: media_player.volume_set
+    data:
+      volume_level: 1
+    target:
+      entity_id: media_player.chromecast
+  mode: single

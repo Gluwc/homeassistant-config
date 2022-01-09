@@ -1,0 +1,96 @@
+input_select.area_bathroom:
+  yatbi:
+    class: area
+    entities:
+      - light.group_bathroom
+      - sensor.temperature_motion_bathroom
+      - sensor.lux_motion_bathroom
+      - display: true
+        entity: sensor.climate_temperature_motion_bathroom
+      - display: true
+        entity: binary_sensor.motion_bathroom
+      - input_datetime.task_clean_bathroom
+      - input_select.area_mirror_bathroom
+input_select.area_bedroom:
+  yatbi:
+    class: area
+    entities:
+      - light.group_bedroom
+      - switch.air_purifier_bedroom
+      - binary_sensor.smoke_detector_smoke_detected
+      - input_datetime.task_clean_bedroom
+      - input_datetime.task_covers_bedroom
+      - cover.curtains_bedroom
+input_select.area_hallway:
+  yatbi:
+    entities:
+      - light.group_hallway
+      - display: true
+        entity: sensor.climate_temperature_motion_hallway
+      - display: true
+        entity: binary_sensor.motion_hallway
+input_select.area_home:
+  yatbi:
+    class: area
+    entities:
+      - input_select.area_hallway
+      - climate.home
+      - sensor.electricity_home
+      - sensor.gas_home
+      - display: true
+        entity: sensor.climate_temperature_home
+input_select.area_kitchen:
+  yatbi:
+    class: area
+    entities:
+      - light.group_kitchen
+      - binary_sensor.motion_hallway_kitchen
+      - sensor.lux_motion_kitchen
+      - sensor.lux_motion_hallway_kitchen
+      - display: true
+        entity: sensor.climate_temperature_motion_kitchen
+      - display: true
+        entity: binary_sensor.motion_kitchen
+      - display: true
+        entity: binary_sensor.contact_door_kitchen
+      - vacuum.neato
+      - input_datetime.task_clean_kitchen
+      - input_datetime.task_clean_fridge
+      - media_player.speaker_kitchen
+input_select.area_living_room:
+  yatbi:
+    class: area
+    entities:
+      - media_player.chromecast
+      - media_player.tv
+      - cover.curtains_living_room
+      - fan.living_room
+      - light.group_living_room
+      - sensor.lux_motion_living_room
+      - switch.pc_lucas
+      - input_datetime.task_clean_living_room
+      - media_player.stereo
+      - camera.living_room
+      - switch.dehumidifier
+      - switch.tub_fans
+      - display: true
+        entity: sensor.climate_temperature_motion_living_room
+      - display: true
+        entity: sensor.living_room_humidity
+      - display: true
+        entity: binary_sensor.contact_window_left_living_room
+      - display: true
+        entity: binary_sensor.contact_window_right_living_room
+      - display: true
+        entity: binary_sensor.motion_living_room
+input_select.area_toilet:
+  yatbi:
+    class: area
+    entities:
+      - light.group_toilet
+      - sensor.lux_motion_toilet
+      - display: true
+        entity: sensor.climate_temperature_motion_toilet
+      - display: true
+        entity: binary_sensor.motion_toilet
+      - input_datetime.task_clean_toilet

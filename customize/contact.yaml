@@ -1,0 +1,8 @@
+binary_sensor.contact_door_kitchen:
+  device_class: door
+binary_sensor.contact_system_closet_bedroom:
+  device_class: door
+binary_sensor.contact_window_left_living_room:
+  device_class: window
+binary_sensor.contact_window_right_living_room:
+  device_class: window

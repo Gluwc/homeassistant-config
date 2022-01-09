@@ -19,3 +19,4 @@ home-assistant_v2.db-shm
 home-assistant_v2.db-wal
 home-assistant.log.1
 home-assistant.log.fault
+.ip_authenticated.yaml

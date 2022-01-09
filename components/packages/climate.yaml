@@ -1,0 +1,6 @@
+climate:
+  - platform: generic_thermostat
+    name: SoftwareThermostat
+    heater: input_boolean.centralheating
+    target_sensor: sensor.climate_temperature_motion_living_room
+    precision: 0.5

@@ -1,0 +1,6 @@
+light.group_living_room:
+  yatbi:
+    entities:
+      - light.desk_living_room
+      - light.tv_living_room
+      - light.couch_living_room

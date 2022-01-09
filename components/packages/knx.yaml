@@ -1,0 +1,10 @@
+knx:
+  climate:
+    - name: "Home"
+      temperature_address: "0/0/7"
+      #setpoint_shift_address: "0/0/2"
+      #setpoint_shift_state_address: "0/0/3"
+      target_temperature_address: "0/0/1"
+      target_temperature_state_address: "0/0/1"
+      operation_mode_address: "0/0/5"
+      operation_mode_state_address: "0/0/6"

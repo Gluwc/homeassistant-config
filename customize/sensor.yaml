@@ -1,0 +1,6 @@
+sensor.electricity_home:
+  friendly_name: Electricity
+  state_class: measurement
+  device_class: power
+sensor.gas_home:
+  friendly_name: Gas
