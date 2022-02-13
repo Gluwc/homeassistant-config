@@ -96,7 +96,7 @@ These components are all available on [HACS](https://hacs.xyz/).
 * [Button Card](https://github.com/custom-cards/button-card)
 * [Decluttering Card](https://github.com/custom-cards/decluttering-card)
 * [Card Mod](https://github.com/thomasloven/lovelace-card-mod)
-
+* [Auto Entities](https://github.com/thomasloven/lovelace-auto-entities)
 ### Button Card Tile Templates
 
 | Template | Requires | Description
