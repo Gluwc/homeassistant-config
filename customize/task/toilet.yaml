@@ -1,0 +1,5 @@
+# Toilet
+input_datetime.task_clean_toilet:
+  yatbi:
+    class: task
+    task_days: "7"

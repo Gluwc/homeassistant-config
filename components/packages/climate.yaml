@@ -4,3 +4,6 @@ climate:
     heater: input_boolean.centralheating
     target_sensor: sensor.climate_temperature_motion_living_room
     precision: 0.5
+    min_temp: 18
+    max_temp: 23
+    target_temp: 22 

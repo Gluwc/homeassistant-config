@@ -1,0 +1,21 @@
+# Amduat
+input_datetime.task_clean_amduat:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_feed_amduat:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_shed_amduat:
+  yatbi:
+    class: task
+    task_days: "30"
+input_datetime.task_poop_amduat:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_amduat:
+  yatbi:
+    class: task
+    task_days: "7"

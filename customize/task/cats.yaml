@@ -1,0 +1,4 @@
+input_datetime.task_litter_cats:
+  yatbi:
+    class: task
+    task_days: "7"

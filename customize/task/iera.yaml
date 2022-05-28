@@ -1,0 +1,4 @@
+input_datetime.task_fleadrops_iera:
+  yatbi:
+    class: task
+    task_months: "3"

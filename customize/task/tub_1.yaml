@@ -1,0 +1,21 @@
+# Tub 1
+input_datetime.task_clean_tub_1:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_feed_tub_1:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_shed_tub_1:
+  yatbi:
+    class: task
+    task_days: "30"
+input_datetime.task_poop_tub_1:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_tub_1:
+  yatbi:
+    class: task
+    task_days: "7"

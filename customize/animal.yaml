@@ -1,3 +1,4 @@
+# Amduat
 input_select.animal_amduat:
   yatbi:
     background-image: url('/local/animals/amduat/picture.png')
@@ -13,6 +14,8 @@ input_select.animal_amduat:
       - input_datetime.task_shed_amduat
       - input_datetime.task_poop_amduat
       - input_datetime.task_water_amduat
+
+# Ghost
 input_select.animal_ghost:
   yatbi:
     background-image: url('/local/animals/ghost/picture.png')
@@ -28,6 +31,8 @@ input_select.animal_ghost:
       - input_datetime.task_shed_ghost
       - input_datetime.task_poop_ghost
       - input_datetime.task_water_ghost
+
+# Iera
 input_select.animal_iera:
   yatbi:
     background-image: url('/local/animals/iera/picture.png')
@@ -35,6 +40,8 @@ input_select.animal_iera:
     entities:
       - input_datetime.task_fleadrops_iera
       - input_datetime.task_litter_cats
+
+# Luna
 input_select.animal_luna:
   yatbi:
     background-image: url('/local/animals/luna/picture.png')
@@ -42,6 +49,8 @@ input_select.animal_luna:
     entities:
       - input_datetime.task_fleadrops_luna
       - binary_sensor.contact_food_bin_luna
+
+# Naga
 input_select.animal_naga:
   yatbi:
     background-image: url('/local/animals/naga/picture.png')
@@ -57,6 +66,8 @@ input_select.animal_naga:
       - input_datetime.task_shed_naga
       - input_datetime.task_poop_naga
       - input_datetime.task_water_naga
+
+# Aikana
 input_select.animal_aikana:
   yatbi:
     class: snake
@@ -72,6 +83,8 @@ input_select.animal_aikana:
       - input_datetime.task_shed_aikana
       - input_datetime.task_poop_aikana
       - input_datetime.task_water_aikana
+
+# Pluis
 input_select.animal_pluis:
   yatbi:
     background-image: url('/local/animals/pluis/picture.png')
@@ -79,6 +92,8 @@ input_select.animal_pluis:
     entities:
       - input_datetime.task_fleadrops_pluis
       - input_datetime.task_litter_cats
+
+# Tub 1
 input_select.animal_tub_1:
   yatbi:
     class: snake
@@ -92,6 +107,8 @@ input_select.animal_tub_1:
       - input_datetime.task_shed_tub_1
       - input_datetime.task_poop_tub_1
       - input_datetime.task_water_tub_1
+
+# Tub 2
 input_select.animal_tub_2:
   yatbi:
     class: snake
@@ -105,6 +122,8 @@ input_select.animal_tub_2:
       - input_datetime.task_shed_tub_2
       - input_datetime.task_poop_tub_2
       - input_datetime.task_water_tub_2
+
+# Tub 3
 input_select.animal_tub_3:
   yatbi:
     class: snake
@@ -118,6 +137,8 @@ input_select.animal_tub_3:
       - input_datetime.task_shed_tub_3
       - input_datetime.task_poop_tub_3
       - input_datetime.task_water_tub_3
+
+# Tub 4
 input_select.animal_tub_4:
   yatbi:
     class: snake

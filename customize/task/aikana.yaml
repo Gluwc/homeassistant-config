@@ -1,0 +1,21 @@
+# Aikana
+input_datetime.task_clean_aikana:
+  yatbi:
+    class: task
+    task_months: "1"
+input_datetime.task_feed_aikana:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_shed_aikana:
+  yatbi:
+    class: task
+    task_days: "30"
+input_datetime.task_poop_aikana:
+  yatbi:
+    class: task
+    task_days: "7"
+input_datetime.task_water_aikana:
+  yatbi:
+    class: task
+    task_days: "7"

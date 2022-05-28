@@ -1,9 +1,0 @@
-proximity:
-  elisa:
-    ignored_zones:
-      - elisa
-    devices:
-      - device_tracker.gps_elisa
-    zone: home
-    tolerance: 50
-    unit_of_measurement: km

@@ -1,3 +1,4 @@
+# Bathroom
 input_select.area_bathroom:
   yatbi:
     class: area
@@ -11,6 +12,8 @@ input_select.area_bathroom:
         entity: binary_sensor.motion_bathroom
       - input_datetime.task_clean_bathroom
       - input_select.area_mirror_bathroom
+
+# Bedroom
 input_select.area_bedroom:
   yatbi:
     class: area
@@ -21,6 +24,8 @@ input_select.area_bedroom:
       - input_datetime.task_clean_bedroom
       - input_datetime.task_covers_bedroom
       - cover.curtains_bedroom
+
+# Hallway
 input_select.area_hallway:
   yatbi:
     entities:
@@ -29,16 +34,20 @@ input_select.area_hallway:
         entity: sensor.climate_temperature_motion_hallway
       - display: true
         entity: binary_sensor.motion_hallway
+
+# Home
 input_select.area_home:
   yatbi:
     class: area
     entities:
       - input_select.area_hallway
-      - climate.home
+      - climate.softwarethermostat
       - sensor.electricity_home
       - sensor.gas_home
       - display: true
-        entity: sensor.climate_temperature_home
+        entity: sensor.climate_temperature_motion_living_room
+
+# Kitchen
 input_select.area_kitchen:
   yatbi:
     class: area
@@ -57,6 +66,8 @@ input_select.area_kitchen:
       - input_datetime.task_clean_kitchen
       - input_datetime.task_clean_fridge
       - media_player.speaker_kitchen
+
+# Living Room
 input_select.area_living_room:
   yatbi:
     class: area
@@ -83,6 +94,8 @@ input_select.area_living_room:
         entity: binary_sensor.contact_window_right_living_room
       - display: true
         entity: binary_sensor.motion_living_room
+
+# Toilet
 input_select.area_toilet:
   yatbi:
     class: area

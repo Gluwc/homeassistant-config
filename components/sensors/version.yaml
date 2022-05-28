@@ -1,6 +1,0 @@
-- platform: version
-  name: Version Docker
-  source: docker
-- platform: version
-  name: Version Local
-  source: local

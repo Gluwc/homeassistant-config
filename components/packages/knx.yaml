@@ -1,10 +1,23 @@
 knx:
-  climate:
-    - name: "Home"
-      temperature_address: "0/0/7"
-      #setpoint_shift_address: "0/0/2"
-      #setpoint_shift_state_address: "0/0/3"
-      target_temperature_address: "0/0/1"
-      target_temperature_state_address: "0/0/1"
-      operation_mode_address: "0/0/5"
-      operation_mode_state_address: "0/0/6"
+  number:
+    - name: Boiler Set Point
+      address: "0/0/1"
+      type: temperature
+      min: 10
+      max: 70
+  sensor:
+    - name: Boiler Water Temperature
+      state_address: "0/0/4"
+      type: temperature
+    - name: Boiler Pressure
+      state_address: "0/0/12"
+      type: pressure_2byte
+    - name: Boiler Modulation
+      state_address: "0/0/3"
+      type: percent
+      sync_state: False
+  binary_sensor:
+    - name: Boiler Flame Status
+      state_address: "0/0/7"
+    - name: Boiler Domestic Water Status
+      state_address: "0/0/13"

@@ -22,20 +22,6 @@
 
         - type: custom:layout-break
 
-        # Animals
-        - type: custom:decluttering-card
-          template: yatbi_class
-          variables:
-            - class: animal
-            - name: Animals
-
-        # Snakes
-        - type: custom:decluttering-card
-          template: yatbi_class
-          variables:
-            - class: snake
-            - name: Snakes
-
         # Settings
         - type: custom:decluttering-card
           template: tiles

@@ -1,0 +1,4 @@
+input_datetime.task_clean_living_room:
+  yatbi:
+    class: task
+    task_days: "7"
