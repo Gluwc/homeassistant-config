@@ -73,7 +73,7 @@ input_select.area_living_room:
     class: area
     entities:
       - media_player.chromecast
-      - media_player.tv
+      - media_player.sony_bravia_tv
       - cover.curtains_living_room
       - fan.living_room
       - light.group_living_room

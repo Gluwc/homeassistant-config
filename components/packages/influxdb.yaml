@@ -1,3 +1,10 @@
 influxdb:
-  host: 192.168.1.3
+  api_version: 2
+  host: home.gluwc.com
+  port: 8086
+  token: 6hz4eMzQPtGXngBWRybA2tN6jVwLsTB4PgFrfrdjgjHM5RIQljL813nwTyao1VrE0wOVcNoilKkGEOfBCymZxg==
+  organization: c6e3aace0a890aa1
+  bucket: homeassistant
   default_measurement: state
+  verify_ssl: false
+  ssl: false

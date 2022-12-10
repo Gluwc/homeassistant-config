@@ -39,7 +39,7 @@ popup:
           style:
             hui-vertical-stack-card$: |
               #root {
-                padding: 8px;
+                padding: 4px;
                 padding-top: 0px;
               }
               * > ha-card {
@@ -76,4 +76,7 @@ popup:
                 tap_action:
                   action: fire-dom-event
                   browser_mod:
-                    command: close-popup
+                    service: browser_mod.close_popup
+                    data:
+                      deviceID:
+                        - this

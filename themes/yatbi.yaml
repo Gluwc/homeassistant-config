@@ -5,7 +5,6 @@ yatbi:
       display: none;
     }
   card-mod-more-info-yaml: |
-    $: |
       .mdc-dialog .mdc-dialog__container .mdc-dialog__surface {
         background: #060606CC;
         border-radius: 8px;
@@ -13,6 +12,11 @@ yatbi:
       .mdc-dialog__content::-webkit-scrollbar {
         display: none;
       }
+
+  popup-border-radius: 8px
+  popup-background-color: "#060606CC"
+  popup-padding-x: 0px
+  popup-padding-y: 0px
 
   # Main colors
   primary-color: "#4788d4"

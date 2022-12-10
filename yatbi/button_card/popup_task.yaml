@@ -11,9 +11,10 @@ popup_task:
   hold_action:
     action: fire-dom-event
     browser_mod:
-      command: popup
-      card: !include includes/auto.yaml
-      deviceID:
-        - this
-      hide_header: true
+      service: browser_mod.popup
+      data:
+        content: !include includes/auto.yaml
+        deviceID:
+          - this
+        hide_header: true
   custom_fields: !include includes/custom_fields.yaml

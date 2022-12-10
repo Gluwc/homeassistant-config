@@ -1,6 +1,5 @@
 input_select.person_lucas:
   yatbi:
-    background-image: url('/local/person/lucas/picture.png')
     class: person
     entities:
       - display: true

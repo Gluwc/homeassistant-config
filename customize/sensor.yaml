@@ -4,3 +4,8 @@ sensor.electricity_home:
   device_class: power
 sensor.gas_home:
   friendly_name: Gas
+sensor.dhs_adguard_latest_version:
+  yatbi:
+    entities:
+    - sensor.dhs_adguard_current_version
+    - button.dhs_adguard_update
