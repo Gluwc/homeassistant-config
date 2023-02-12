@@ -1,8 +1,0 @@
-input_datetime.task_covers_bedroom:
-  yatbi:
-    class: task
-    task_days: "14"
-input_datetime.task_clean_bedroom:
-  yatbi:
-    class: task
-    task_days: "7"

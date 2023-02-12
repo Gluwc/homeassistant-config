@@ -1,6 +1,0 @@
-binary_sensor.lucas_pc_power_status:
-  device_class: power
-binary_sensor.pc_lucas:
-  device_class: power
-  friendly_name: PC
-  icon: mdi:desktop-tower

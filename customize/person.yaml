@@ -1,9 +1,0 @@
-input_select.person_lucas:
-  yatbi:
-    class: person
-    entities:
-      - display: true
-        entity: sensor.battery_phone_lucas
-      - switch.pc_lucas
-      - sensor.location_phone_lucas
-      - device_tracker.gps_lucas

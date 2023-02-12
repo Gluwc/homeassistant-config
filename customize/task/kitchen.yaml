@@ -1,8 +1,0 @@
-input_datetime.task_clean_fridge:
-  yatbi:
-    class: task
-    task_days: "30"
-input_datetime.task_clean_kitchen:
-  yatbi:
-    class: task
-    task_days: "7"

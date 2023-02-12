@@ -1,6 +1,0 @@
-# Templates
-button_card_templates: !include_dir_merge_named yatbi/button_card/
-decluttering_templates: !include_dir_merge_named yatbi/decluttering_card/
-
-# Views
-views: !include_dir_merge_list yatbi/views/

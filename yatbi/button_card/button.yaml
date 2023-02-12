@@ -1,8 +1,0 @@
-button:
-  color: var(--primary-color)
-  color_type: card
-  styles:
-    card:
-      - height: 40px
-    name:
-      - font-weight: var(--yatbi-font-weight)
